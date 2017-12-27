@@ -1,0 +1,215 @@
+<!--pages/details/details.wxml-->
+<scroll-view style="height: 100%;" scroll-y="true" scroll-top="{{scrollTop.scroll_top}}" bindscroll="scrollTopFun">
+  <view class='details'>
+    <view class='details_header position_r'>
+      <image src="../image/11.jpg" class="slide-image" style='height:320rpx;'></image>
+      <view class='study_now position_a'>主讲*{{teacher.teacher}}</view>
+      <view class='class_tit position_a'>{{teacher.title}}</view>
+      <view class='class_banner position_a'>{{teacher.banner}}</view>
+    </view>
+    <view class='details_content'>
+      <view class='details_title'>{{teacher.title}}</view>
+      <view class='details_price'>
+        <text class='price_original' style='color:#1cb15d; margin-right:24rpx;font-size:36rpx;'>{{teacher.now_price}}</text>
+        <text class='price_original'>{{teacher.original_price}}</text>
+        <text>已报名{{teacher.reg_number}}人</text>
+      </view>
+      <view class='details_time'>
+        <view class='details_time_'>
+          <text>{{teacher.start_time}}-{{teacher.end_time}}</text>丨
+          <text>共{{teacher.class_num}}节</text>
+          <view class='time_arrange'>每周六  20：00-21：00</view>
+        </view>
+      </view>
+      <view class='details_teacher'>
+        {{teacher.teacher}}
+      </view>
+    </view>
+    <!-- 课程  -->
+    <view class="subject_details white {{fix?'fix':''}}">
+      <view class="{{item.click?'on':''}}" wx:for='{{subject_detail}}' wx:key='' wx:for-item='item' data-detail='{{index}}' bindtap='click'>
+        {{item.subject}}
+      </view>
+    </view>
+
+    <!-- 课程详情  -->
+    <view class='subject_particulars'>
+      <image src='../image/detail.jpg'></image> 
+    </view>
+    <!-- 课程安排  -->
+    <view class='subject_arrangement white'>
+      <view class='subject_arrangement_tit'>
+        <view class='arrangement_tit'>课程安排</view>
+        <view class='arrangement_hint'>已结束课程，如有回放，购买后即可观看</view>
+      </view>
+      <view class='subject_arrangement_ul'>
+        <view class='subject_arrangement_li table'>
+          <view class='td arr_td_l'><text>1</text></view>
+          <view class='td arr_td_m'>
+            <view class='arr_n'>第一课时</view>
+            <view class='arr_time'>
+              <text>2017-12-07</text>
+              <text>周四</text>
+              <text>20:00-21:00</text>
+              <view class='arr_td_r right'>已结束</view>
+            </view>
+          </view>
+        </view>
+
+        <view class='subject_arrangement_li table'>
+          <view class='td arr_td_l'><text>2</text></view>
+          <view class='td arr_td_m'>
+            <view class='arr_n'>第二课时</view>
+            <view class='arr_time'>
+              <text>2017-12-08</text>
+              <text>周五</text>
+              <text>20:00-21:00</text>
+              <view class='arr_td_r right'>已结束</view>
+            </view>
+          </view>
+        </view>
+
+        <view class='subject_arrangement_li table'>
+          <view class='td arr_td_l'><text>3</text></view>
+          <view class='td arr_td_m'>
+            <view class='arr_n'>第三课时</view>
+            <view class='arr_time'>
+              <text>2017-12-09</text>
+              <text>周六</text>
+              <text>20:00-21:00</text>
+              <view class='arr_td_r right'>已结束</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 课程评价  -->
+    <view class='evaluation white'>
+      <view class='arrangement_tit'>课程评价</view>
+      <view class='li' wx:for='{{evaluation}}' wx:key='evaluation' wx:for-item='item'>
+        <view class='evaluation_user table' >
+          <view class='td'><image class='avatar' src='{{item.avatar}}'></image></view>
+          <view class='td'>
+            <view>{{item.name}}</view>
+            <view class='table'>
+              <view class='td'><image class='star' src='../image/star.png'></image></view>
+              <view class='td'><image class='star' src='../image/star.png'></image></view>
+              <view class='td'><image class='star' src='../image/star.png'></image></view>
+              <view class='td'><image class='star' src='../image/star.png'></image></view>
+              <view class='td'><image class='star' src='../image/star.png'></image></view>
+            </view>
+          </view>
+        </view>
+        <view class='content'>{{item.content}}</view>
+        <view class='time'>{{item.time}}</view>
+      </view>
+    </view>
+
+    <!-- 上课须知  -->
+    <view class='class_notes white'>
+      <view class='note_title'>上课须知</view>
+      <view class='note_ul'>
+        <view class='note_li table'>
+          <view class='td'><text class='note_n'>1</text></view>
+          <view class='td'>
+            <view class='note_title'>报班须知</view>
+            <view>
+              <text class='note_h'>成班原则：</text>
+              <text class='note_f'>报名即开班</text>
+            </view>
+            <view>
+              <text class='note_h'>随时退：</text>
+              <text class='note_f'>符合退款条件申请退款，剩余课程的课酬将全部退回</text>
+            </view>
+            <view>
+              <text class='note_h'>随时插班：</text>
+              <text class='note_f'>班课开课后也支持报名</text>
+            </view>
+            <view>
+              <text class='note_h'>提供回放：</text>
+              <text class='note_f'>回放有效期：90天</text>
+            </view>
+          </view>
+        </view>
+        <view class='note_li table'>
+          <view class='td'><text class='note_n'>2</text></view>
+          <view class='td'>
+            <view class='note_title'>报名/购买后怎么上课</view>
+            <view>
+              <text class='note_h'>用APP：</text>
+              <text class='note_f'>在学生版APP“课堂”页面找到课程，进入直播室上课</text>
+            </view>
+            <view>
+              <text class='note_h'>用微信：</text>
+              <text class='note_f'>报名即开班</text>
+            </view>
+            <view>
+              <text class='note_h'>随时退：</text>
+              <text class='note_f'>符合退款条件申请退款，剩余课程的课酬将全部退回</text>
+            </view>
+            <view>
+              <text class='note_h'>随时插班：</text>
+              <text class='note_f'>班课开课后也支持报名</text>
+            </view>
+            <view>
+              <text class='note_h'>提供回放：</text>
+              <text class='note_f'>回放有效期：90天</text>
+            </view>
+          </view>
+        </view>
+        <view class='note_li table'>
+          <view class='td'><text class='note_n'>3</text></view>
+          <view class='td'>
+            <view class='note_title'>报名/购买后怎么上课</view>
+            <view>
+              <text class='note_h'>用APP：</text>
+              <text class='note_f'>在学生版APP“课堂”页面找到课程，进入直播室上课</text>
+            </view>
+            <view>
+              <text class='note_h'>用微信：</text>
+              <text class='note_f'>报名即开班</text>
+            </view>
+            <view>
+              <text class='note_h'>随时退：</text>
+              <text class='note_f'>符合退款条件申请退款，剩余课程的课酬将全部退回</text>
+            </view>
+            <view>
+              <text class='note_h'>随时插班：</text>
+              <text class='note_f'>班课开课后也支持报名</text>
+            </view>
+            <view>
+              <text class='note_h'>提供回放：</text>
+              <text class='note_f'>回放有效期：90天</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 平台保障  -->
+    <view class='protection white'>
+      <view class='protection_title'>平台保障</view>
+      <view class='protection_ul'>
+        <view class='protection_li'>
+          <view class='iconfont icon-llrefundmessageicon'><text>资金安全</text></view>
+        </view>
+        <view class='protection_li'>
+          <view class='iconfont icon-fuwuchengnuotubiao'><text>真实评价</text></view>
+        </view>
+        <view class='protection_li'>
+          <view class='iconfont icon-dingdan'><text>实名认证</text></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+
+<!-- 咨询与回到顶部  -->
+<view class='footer_totop' style="" wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun">
+  <text class='iconfont icon-arrowUpAdd'></text>
+</view>
+<view class='footer_consult center'>
+  <view class='iconfont icon-dianhua' bindtap='makecall'>咨询</view>
+  <view bindtap=''>立即报名</view>
+</view>  

@@ -1,0 +1,149 @@
+/**index.wxss**/
+@import '../moban/fonts/iconfont.wxss';
+@import '../moban/conclude/conclude.wxss';
+@import '../moban/footer/footer.wxss';
+page{
+  background: #f1f5f6;
+}
+.search_input{
+  background: #fe6b01;
+  color: #333;
+  padding: 24rpx 0;
+  top: 0;
+  z-index: 999;
+}
+.search_input>input{
+  font-size: 12px;
+  margin: 0 108rpx 0 36rpx;
+  padding: 12rpx 0 12rpx 96rpx; 
+  background: #fff;
+  border-top-left-radius: 48rpx;
+  border-top-right-radius: 48rpx;
+  border-bottom-left-radius: 48rpx;
+  border-bottom-right-radius: 48rpx;
+}
+.icon-search {
+  font-size: 36.2rpx;
+  top: 28%;
+  left: 8%;
+}
+.icon-qiandao{
+  color: #fff;
+  font-size: 43.5rpx;
+  right: 4%;
+  top: 28%;
+}
+/* 幻灯片  */
+.swiper_1{
+  margin-top: 120rpx;
+  width: 100%;
+  height: 435rpx;
+  color: #000;
+}
+.swiper_1 image{
+  width: 100%;
+}
+.class_teacher{
+  color: #fff;
+  font-size: 21.7rpx;
+  width: 28rpx;
+  top: 36%;
+  right: 6%;
+}
+.class_tit{
+  color: #fff;
+  top: 36%;
+  left: 10%;
+}
+.class_banner{
+  font-weight: 900;
+  font-size: 32.6rpx;
+  color: #fff;
+  top: 48%;
+  left: 10%;
+}
+.study_now {
+  font-size: 21.7rpx;
+  top: 72%;
+  left: 10%;
+  padding: 12rpx 32rpx;
+  background: #fff;
+  border-radius:25.4rpx; 
+}
+.iconfont{
+  font-size: 43.5rpx;
+}
+/*  公开课  */
+.public_class{
+  margin-top: 24rpx;
+}
+.public_header{
+  width: 100%;
+}
+.public_tit{
+  font-size: 20px;
+}
+.icon-jiantouyou{
+  font-size: 25.4rpx;
+  margin-right: 5%;
+  transform: translate(0,20%);
+  color: #9d9d9d;
+}
+.icon-jiantouyou:before{
+  position: absolute;
+  right: -50%;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+.public_li .class_banner,.public_li .class_tit,.public_li .study_now{
+  font-size: 22rpx;
+}
+.public_li .study_now{
+  top: 60%;
+  left: 10%;
+  padding: 6rpx 6rpx;
+}
+.public_body{
+  padding-left: 4%;
+}
+.public_content{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 25.4rpx;
+}
+.online_class{
+  top:32rpx; 
+  background: rgba(0, 0, 0, .3);
+  color: #fff;
+  font-size: 21.7rpx;
+  padding: 12rpx;
+  }
+.online_class_time{
+  right:8%;
+  bottom:28%;
+  font-size:21.7rpx;
+  color:#fff;
+  background:rgba(0,0,0,.5);
+  padding-left:12rpx;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+  .public_class_footer{
+    font-size: 21.7rpx;
+    color: #bababa;
+  }
+.public_footer .icon-search,.public_footer{
+  font-size: 25.4rpx;
+}
+.public_footer{
+  padding: 12rpx 0;
+}
+/*****好课推荐 *****/
+.good_class{
+  margin-top: 24rpx;
+}
+/* 底部 */
+.toonline{
+  color: #fa6805;
+}

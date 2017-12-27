@@ -1,0 +1,157 @@
+/* pages/nav/study/study.wxss */
+@import '../../moban/fonts/iconfont.wxss';
+@import '../../moban/conclude/conclude.wxss';
+@import '../../moban/footer/footer.wxss';
+.tostudy{
+  color: #fe6d04;
+}
+.study_header{
+  padding: 0 4%;
+}
+.study_tit{
+  display: inline-block;
+  border-radius: 6rpx;
+  border: solid 3.6rpx #6d6d6f;
+}
+.study_tit text{
+  display: inline-block;
+  padding: 12rpx 36rpx;
+}
+.active{
+  background: #6d6d6f;
+  color: #fff;
+}
+.subject_ul{
+  padding: 24rpx 0;
+  margin-top: 12rpx;
+  border-top: solid 1px #c7c7c7;
+  color: #9f9f9f;
+}
+.subject_li{
+  text-decoration: underline;
+  padding: 0 24rpx;
+}
+.show{
+  color: #ff6500;
+}
+/**************
+****课程概况****
+***************/
+/* 未完结课程 */
+.subject_summary_ul{
+  margin-top: 12rpx;
+}
+.subject_summary_li{
+  padding: 12rpx 4%;
+  display: table;
+  width: 92%;
+  margin-bottom: 12rpx;
+}
+.summary_l,.summary_r{
+  display: table-cell;
+  vertical-align: middle;
+}
+.summary_l{
+  width: 20%;
+}
+.summary_r{
+  padding-left: 36rpx;
+}
+.summary_l image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.summary_title{
+  font-size: 36rpx;
+}
+.summary_lesson{
+  padding: 12rpx 0;
+}
+.summary_duration,.summary_lesson{
+  color: #9f9f9f
+}
+/* 完结课程  */
+
+.over_tit{
+  padding: 12rpx 4%;
+}
+.subject_summary_ul.over{
+  color: #9f9f9f;
+}
+/*****课表部分******/
+.table_ul{
+  margin-top: 12rpx;
+  border-top: solid 1px #c7c7c7;
+  padding: 24rpx 0;
+}
+picker{
+  display: inline-block;
+}
+.picker{
+  font-size: 26rpx;
+}
+.picker text{
+  color: blue;
+}
+.table_{
+  
+}
+.table_time{
+  padding: 12rpx 4%;
+  font-size: 26rpx;
+}
+.table_summary{
+  display: table;
+  width: 100%;
+  padding: 0 4%;
+}
+.table_summary_l,.table_summary_r{
+  display: table-cell;
+  vertical-align: middle;
+}
+.table_summary_l{
+  width: 20%;
+}
+.table_summary_l_condition,.table_summary_r_teacher{
+  padding: 12rpx 0;
+}
+.table_summary_r{
+  position: relative;
+  text-align: left;
+  padding: 12rpx 0 12rpx 56rpx;
+  margin: 12rpx 0;
+}
+.table_summary_r:before{
+  content: '';
+  width: 1px;
+  height: 150rpx;
+  background: #c7c7c7;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0,-50%)
+}
+.table_summary_r image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.header_type{
+  display: inline-block;
+  font-size: 24rpx;
+  padding: 6rpx 8rpx;
+  color: #88abff;
+  border: solid 1px #88abff;
+  margin-right: 24rpx;
+}
+.table_summary_r_teacher image,
+.table_summary_r_teacher text{
+  vertical-align: middle;
+  margin-right: 24rpx;
+}
+.table_summary_r_chat{
+  font-size: 26rpx;
+  display: inline-block;
+  padding: 6rpx ;
+  border: solid 1px #6d6d6f
+}

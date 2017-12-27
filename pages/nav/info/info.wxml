@@ -1,0 +1,40 @@
+<!--pages/nav/info/info.wxml-->
+<!-- 底部导航条  -->
+<import src="../../moban/footer/footer.wxml"/>
+<template is="footer"/>
+<view class='message_'>
+  <view class='menu_message white'>
+    <view class='td_l'>
+      <text class='iconfont icon-tongzhi'></text>
+    </view>
+    <view class='td_r'>
+      <view class='menu_message_tit'>
+        <view class='menu_message_tit_l left'>系统通知</view>
+        <view class='menu_message_tit_r right'>星期四</view>
+        <view class='clearfix'></view>
+      </view>
+      <view class='menu_message_content'>
+        <text>上课提醒：郑晓慧老师的建筑·景观·室内手绘免费体验课班课即将在12月14日 20：00-21：00开课，打开网站或直接在APP上体验在线上课吧！</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 个人信息  -->
+
+  <view class='menu_message white' wx:for="{{messageitems}}" wx:key="message" wx:for-item="item">
+    <view class='td_l'>
+      <image src='{{item.image}}' class='td_l_image'></image>
+    </view>
+    <view class='td_r'>
+      <view class='menu_message_tit'>
+        <view class='menu_message_tit_h left'>群组</view>
+        <view class='menu_message_tit_l left'>{{item.title}}</view>
+        <view class='menu_message_tit_r right'>{{item.time}}</view>
+        <view class='clearfix'></view>
+      </view>
+      <view class='menu_message_content'>
+        <text>{{item.people}}：{{item.talk}}</text>
+      </view>
+    </view>
+  </view>
+</view>

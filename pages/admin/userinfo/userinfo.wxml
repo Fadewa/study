@@ -1,0 +1,105 @@
+<!--pages/admin/userinfo/userinfo.wxml-->
+<view class='user'>
+<!-- 无数据  -->
+  <form bindsubmit="formSubmit" bindreset="formReset" wx:if="{{defaults}}">
+    <view class="section_header white">
+      <input name="username" value='' placeholder="用户昵称" />
+      <text class='iconfont icon-jiantouyou right'></text>
+      <view class='userimg table'>
+        <view class='td'>用户头像</view>
+        <view class='td td_r' bindtap="chooseImg" >
+          <image src='../../image/t1.jpg' ></image>
+          <input value='' name='img' style='display:none'/>
+        </view>
+      </view>
+    </view>
+    <view class='section_body white'>
+      <view class='body_ul'>
+        <view class='body_li table'>
+          <text class='li_t td td_h'>手机号码</text>
+          <input class='td td_m' disabled='disabled' name="mobile" value='' placeholder="请输入您的手机号码" />
+          <text class='iconfont icon-jiantouyou td td_f'></text>
+        </view>
+        <view class='body_li table'>
+          <text class='li_t td td_h'>真实姓名</text>
+          <input class='td td_m' value='' name="realName" placeholder="请输入您的真实姓名" />
+          <text class='iconfont icon-jiantouyou td td_f'></text>
+        </view>
+        <view class='body_li table'>
+          <text class='li_t td td_h'>性别</text>
+          <picker class='td td_m' bindchange="bindSexChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+              <input name='gender' value='{{array[index]}}'/>
+            </view>
+          </picker>
+          <text class='iconfont icon-jiantouyou td_f'></text>
+        </view>
+        <view class='body_li table'>
+          <text class='li_t td td_h'>出生日期</text>
+          <picker class='td td_m' bindchange="bindBirthChange" mode="date" value="{{date}}" start="1930-09-01" end="2017-09-01">
+            <view class="picker">
+              <input name='birthDate' value='{{date}}'/>
+            </view>
+          </picker>
+          <text class='iconfont icon-jiantouyou td_f'></text>
+        </view>
+        <view class='body_li table'>
+          <text class='li_t td td_h'>家庭地址</text>
+          <input class='td td_m' name='adress' value='' placeholder='请输入您的家庭地址'/>
+          <text class='iconfont icon-jiantouyou td td_f'></text>
+        </view>
+      </view>
+    </view>
+  </form>
+<!-- 有数据  -->
+  <form bindsubmit="formSubmit" bindreset="formReset" wx:else>
+    <view class="section_header white">
+      <input name="nickName" value='{{person.nickName}}' placeholder="用户昵称" />
+      <text class='iconfont icon-jiantouyou right'></text>
+      <view class='userimg table'>
+        <view class='td'>用户头像</view>
+        <view class='td td_r' bindtap="chooseImg">
+          <image src='{{person.avatarUrl}}' ></image>
+        </view>
+      </view>
+    </view>
+    <view class='section_body white'>
+      <view class='body_ul'>
+        <view class='body_li table'>
+          <text class='li_t td td_h'>手机号码</text>
+          <input class='td td_m' disabled='disabled' name="mobile" value='{{person.mobile}}' placeholder="请输入您的手机号码" />
+          <text class='iconfont icon-jiantouyou td td_f'></text>
+        </view>
+        <view class='body_li table'>
+          <text class='li_t td td_h'>真实姓名</text>
+          <input class='td td_m' value='{{person.realName}}' name="realName" placeholder="请输入您的真实姓名" />
+          <text class='iconfont icon-jiantouyou td td_f'></text>
+        </view>
+        <view class='body_li table'>
+          <text class='li_t td td_h'>性别</text>
+          <picker class='td td_m' bindchange="bindSexChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+              <input name='sex' value='{{person.sex}}' disabled='disabled'/>
+            </view>
+          </picker>
+          <text class='iconfont icon-jiantouyou td_f'></text>
+        </view>
+        <view class='body_li table' >
+          <text class='li_t td td_h'>出生日期</text>
+          <picker class='td td_m' bindchange="bindBirthChange"  mode="date" value="{{date}}" start="1930-09-01" end="2017-09-01">
+            <view class="picker">
+              <input name='birthDate' value='{{person.birthDate}}' disabled='disabled'/>
+            </view>
+          </picker>
+          <text class='iconfont icon-jiantouyou td_f'></text>
+        </view>
+        <view class='body_li table'>
+          <text class='li_t td td_h'>家庭地址</text>
+          <input class='td td_m' name='homeLand' value='{{person.homeLand}}' placeholder='请输入您的家庭地址'/>
+          <text class='iconfont icon-jiantouyou td td_f'></text>
+        </view>
+      </view>
+    </view>
+    <button formType="submit" type='primary'>保存</button>
+  </form>
+</view>

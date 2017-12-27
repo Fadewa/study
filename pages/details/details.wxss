@@ -1,0 +1,301 @@
+/* pages/details/details.wxss */
+@import '../moban/fonts/iconfont.wxss';
+@import '../moban/conclude/conclude.wxss';
+/* 幻灯片  */
+page{
+  height: 100%;
+}
+.details_header{
+    width: 100%;
+}
+.details{
+  padding-bottom: 108rpx;
+}
+.details_header{
+  width: 100%;
+  color: #000;
+}
+.details_header image{
+  width: 100%;
+}
+.class_teacher{
+  color: #fff;
+  font-size: 21.7rpx;
+  width: 28rpx;
+  top: 20%;
+  right: 6%;
+}
+.class_tit{
+  color: #fff;
+  top: 35%;
+  left: 10%;
+}
+.class_banner{
+  font-weight: 900;
+  font-size: 32.6rpx;
+  color: #fff;
+  top: 50%;
+  left: 10%;
+}
+.study_now{
+  font-size: 26rpx;
+  background: #fff;
+  border-radius:25.4rpx; 
+  top: 70%;
+  left: 10%;
+  padding: 6rpx 20rpx;
+}
+.details_title{
+  font-size: 48rpx;
+  font-weight: 600;
+}
+.details_content{
+  padding: 12rpx 4%;
+  background: #fff;
+}
+.price_original{
+  color: #a3a3a3;
+  position: relative;
+}
+.price_original:before{
+  content: '¥'
+}
+.price_original:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #a3a3a3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+.details_price text:last-child{
+  float: right;
+  font-size: 26rpx;
+  color: #a3a3a3;
+}
+.details_time{
+  font-size: 26rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.details_time:before{
+  content: '时间';
+  color: #a3a3a3;
+  width: 12%;
+}
+.details_time_{
+  width: 88%;
+}
+.time_arrange{
+  color: #3a3a3a;
+  margin-top: 12rpx;
+}
+.details_teacher{
+  font-size: 28rpx;
+  padding: 12rpx 0;
+}
+.details_teacher:before{
+  content: '老师';
+  font-size: 28rpx;
+  color: #a3a3a3;
+  margin-right: 24rpx;
+}
+.subject_details{
+  margin-top: 24rpx;
+  padding: 12rpx 4%;
+  display: flex;
+  justify-content: space-between;
+}
+.subject_details view{
+  padding:12rpx 24rpx;
+}
+.subject_details view{
+  padding:12rpx 24rpx;
+  color: #727272
+}
+.subject_details .on{
+  border-bottom: solid 2px #ff6f04;
+  color: #000;
+  font-weight: 600;
+}
+.subject_particulars image{
+  width: 100%;
+  height: 4158rpx;
+}
+.fix{
+  position: fixed;
+  top: 0;
+  margin: 0;
+  width: 92%;
+}
+/***课程安排***/
+.subject_arrangement{
+  padding: 12rpx 4%;
+  margin-top: 24rpx;
+}
+.arrangement_tit{
+  font-weight: 600;
+}
+.arrangement_hint{
+  font-size: 24rpx;
+  color: #666;
+  padding: 16rpx 0;
+}
+.subject_arrangement_li{
+  width: 100%;
+  }
+.arr_td_l text{
+  height: 56rpx;
+  width: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: #d3d3d3;
+}
+.arr_td_r{
+}
+.arr_n{
+  font-size: 28rpx;
+}
+.arr_time{
+  padding: 12rpx 0;
+}
+.arr_time,.arr_td_r{
+  font-size: 24rpx;
+  color: #a3a3a3;
+}
+.arr_time text{
+  padding-right: 12rpx;
+}
+.td{
+  vertical-align: middle;
+}
+.td text{
+  display: inline-block;
+}
+/****课程评价****/
+.evaluation{
+  padding: 12rpx 4%;
+  margin-top: 12rpx;
+}
+.li{
+  border-bottom: solid 1px #c7c7c7;
+  padding: 12rpx 0;
+}
+.evaluation_user{
+  width: 100%;
+}
+.content{
+  font-size: 26rpx;
+  padding: 12rpx 0;
+}
+.time{
+  font-size: 24rpx;
+  color: #a3a3a3;
+}
+
+.evaluation_user>view.td:first-child{
+  width: 15%;
+}
+.avatar{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.star{
+  width: 26rpx;
+  height: 26rpx;
+}
+/*****上课须知*****/
+.class_notes{
+  margin-top: 24rpx;
+  padding: 12rpx 4%;
+}
+.class_notes>.note_title{
+  padding: 24rpx 0;
+}
+.note_li{
+  line-height: 56rpx;
+}
+.note_li .td{
+  vertical-align: top;
+}
+.note_li .td text{
+  display: inline-block;
+}
+.note_n{
+  text-align: center;
+  height: 56rpx;
+  width: 56rpx;
+  display: inline-block;
+  border-radius: 50%;
+  background: #a3a3a3;
+  margin-right: 24rpx;
+}
+.note_title,.note_h,.protection_title{
+  font-weight: 600;
+}
+.note_h{
+  font-size: 28rpx;
+}
+.note_f{
+  font-size: 26rpx;
+  color: #7f7f7f;
+}
+/***平台保障***/
+.protection{
+  padding: 12rpx 4%;
+  margin-top: 24rpx;
+}
+.protection_ul{
+  display: flex;
+  justify-content: space-around;
+  padding: 24rpx 0;
+}
+.protection_li .iconfont{
+  font-size: 42rpx;
+  color: #7f7f7f;
+}
+.protection_li .iconfont text{
+  display: inline-block;
+  margin-left: 12rpx;
+  font-size: 26rpx;
+  color: #7f7f7f;
+}
+
+
+.footer_totop{
+  position: absolute; 
+  bottom: 100rpx; 
+  right: 30rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #c7c7c7;
+  background: #fff;
+}
+.footer_totop text{
+  font-size: 36rpx;
+  display: block;
+  padding: 12rpx;
+}
+.footer_consult{
+  font-size: 36rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  line-height: 96rpx;
+}
+.footer_consult .iconfont{
+  font-size: 36rpx;
+  width: 30%;
+  background: #fff;
+}
+.footer_consult view:last-child{
+  width: 70%;
+  background: #ff6f04;
+  color: #fff;
+}

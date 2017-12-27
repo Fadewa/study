@@ -1,0 +1,125 @@
+/* pages/nav/search/search_detail/search_detail.wxss */
+@import '../../../moban/conclude/conclude.wxss';
+.search{
+  font-size: 26rpx;
+  line-height: 1.4rem;
+  padding: 0 4%;
+  color: #a6a6a6;
+}
+.cansle{
+  padding-left: 16rpx;
+  color: #e17400;
+  text-decoration: underline;
+}
+.search input{
+  font-size: 22rpx;
+  padding:12rpx 0 12rpx 130rpx; 
+  width: 70%;
+  background: #f9f9f9;
+}
+.search_ul{
+  font-size: 26rpx;
+  padding: 0 4%;
+}
+.search_li{
+  padding: 12rpx 24rpx;
+}
+/***分类搜索***/
+.search_types_ul{
+  display: flex;
+  justify-content: space-around;
+  padding: 12rpx 4%;
+  background: #fcfcfc;
+  color: #767676;
+  font-size: 24rpx;
+}
+.search_types_li{
+  padding: 6rpx; 
+  position: relative;
+}
+ .search_types_li:hover {
+  color: #ff6d00;
+  border: solid 1px #ff6d00;
+}  
+.subject_body{
+  text-align: center;
+  background: #fff;
+  width: 100%;
+  left: 0;
+  top:16%;
+}
+.td_l{
+  padding:  0 0 4%;
+  width: 20%;
+  background: #f8f9fb;
+}
+.td_l>view.on{
+  background: #fff;
+  color: #000;
+}
+.td_l>view{
+  padding: 12rpx 0;
+}
+
+
+/****老师搜索课程****/
+.teacher_show{
+  margin-top: 36rpx;
+  padding: 24rpx 4%;
+  color: #a6a6a6;
+  font-size: 28rpx;
+}
+.top{
+  padding-bottom: 12rpx;
+}
+.show_teacher{
+  color: #000;
+}
+.teacher_show .td{
+  vertical-align: top
+}
+.td>image{
+  height: 125rpx;
+  width: 125rpx;
+}
+.self_comment{
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #a6a6a6;
+}
+.self_comment>view{
+  padding: 0 3rpx; 
+  border: solid 1px #d7d7d7;
+}
+.self_honor{
+  font-size: 26rpx;
+  padding: 12rpx 0;
+}
+.middle{
+  font-size: 26rpx;
+}
+.comment_goal{
+  color: #ee7400;
+}
+.footer_show,.up_show{
+  width: 100%;
+}
+.up_show{
+  border-bottom: solid 1px #d7d7d7;
+  padding-bottom: 12rpx;
+}
+.type_class{
+  font-size:24rpx;
+  width: 125rpx;
+  text-align: right;
+}
+.type_class>text{
+  padding-right: 12rpx;
+}
+.footer_show{
+  padding-top: 12rpx;
+}
+.footer_show .td{
+  vertical-align: middle;
+}

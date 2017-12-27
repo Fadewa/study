@@ -1,0 +1,125 @@
+<!--index.wxml-->
+<!-- 底部导航条  -->
+<import src="../moban/footer/footer.wxml"/>
+<template is="footer"/>
+<!-- 首页搜索框  -->
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;"
+        class="list" bindscrolltolower="bindDownLoad" bindscroll="scroll">
+<view class='search_input position_f widthfull'>
+  <text class='iconfont icon-search position_a'></text>
+  <input placeholder='搜科目、老师、课程、机构' bindtap='tosearch'></input>
+  <text class='iconfont icon-qiandao position_a'></text>
+</view>
+
+<!-- 幻灯片  -->
+<swiper class='position_r center swiper_1' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color='#f46e0f' style='height:320rpx;'>
+  <block wx:for="{{items}}" wx:key='index_swiper' wx:for-item="item">
+    <swiper-item data-title='{{item.id}}' bindtap='todetails'>
+      <image src="{{item.src}}" class="slide-image" style='height:320rpx;'></image>
+      <view class='class_teacher position_a'>主讲*{{item.teacher}}</view>
+      <view class='class_tit position_a'>{{item.title}}</view>
+      <view class='class_banner position_a'>{{item.banner}}</view>
+      <view class='study_now position_a'>立即学习</view>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 导航部分  -->
+<swiper class='swiper_2 white' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay2}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color='#f46e0f' style='height:360rpx;'>
+  <block>
+    <swiper-item >
+      <view class='nav_li left center' data-id='{{index}}' wx:for="{{navitems}}" wx:key='nav' wx:for-item="item" style='width:75rpx;height:75rpx;line-height:75rpx;margin:36rpx 37.5rpx;'>
+        <view class='iconfont icon-{{item.classs}} ' style="background:{{item.color}};color:#fff;border-radius:50%;"></view>
+        <view style='font-size:26rpx;'>{{item.types}}</view>
+      </view>
+      <view class='clearfix'></view>
+    </swiper-item>
+    <swiper-item >
+      <view class='nav_li left center' data-id='{{index}}' wx:for="{{navitems}}" wx:key='nav' wx:for-item="item" style='width:75rpx;height:75rpx;line-height:75rpx;margin:36rpx 37.5rpx;'>
+        <view class='iconfont icon-{{item.classs}} ' style="background:{{item.color}};color:#fff;border-radius:50%;"></view>
+        <view style='font-size:14px;'>{{item.types}}</view>
+      </view>
+      <view class='clearfix'></view>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<!-- 公开课  -->
+<view class='public_class white'>
+  <view class='wrapper'>
+    <view class='public_header'>
+      <view class='public_tit left'>公开课</view>
+      <view class='iconfont icon-jiantouyou right position_r'>更多</view>
+      <view class='clearfix'></view>
+    </view>
+  </view>
+  <view class='public_body'>
+      <view class='public_ul'>
+        <view class='public_li left position_r' wx:for="{{items_public}}" wx:key='index_swiper' style='width:46%;padding:32rpx 4% 32rpx 0' bindtap='todetails' data-title='{{item.id}}'>
+          <image src="{{item.src}}" style='width:100%;height:260rpx;'></image>
+          <view class='class_tit position_a' style='left:0'>{{item.title}}</view>
+          <view class='class_banner position_a' style='left:0'>{{item.banner}}</view>
+          <view class='study_now position_a' style='left:0'>主讲*{{item.teacher}}</view>
+          <view class='online_class position_a'>直播课</view>
+          <view class='online_class_time position_a'>今天20：00开始</view>
+          <view class='public_content'>{{item.title}}:{{item.banner}}</view>
+          <view class='public_class_footer'>
+            <text class='class_type'>{{item.subject_type}}</text>
+            <text class='class_sign right'>{{item.reg_number}}人已报名</text>
+          </view>
+        </view>
+        <view class='clearfix'></view>
+      </view>
+  </view>
+  <view class='public_footer center' bindtap='changeContent'>
+    <text>换一批</text>
+    <text class='iconfont icon-search'></text>
+  </view>
+</view>
+
+<!-- 好课推荐  -->
+<view class='good_class white'>
+  <view class='wrapper'>
+    <view class='public_header'>
+      <view class='public_tit left'>好课推荐</view>
+      <view class='iconfont icon-jiantouyou right position_r'>更多</view>
+      <view class='clearfix'></view>
+    </view>
+  </view>
+  <view class='public_body'>
+      <view class='public_ul'>
+        <view class='public_li' wx:for="{{list}}" wx:key='index_swiper' style='padding:32rpx 4% 32rpx 0;' bindtap='todetails' data-title='{{item.id}}'>
+          <view class='left position_r' style='width:40%'>
+            <image src="{{item.src}}" style='width:100%;height:160rpx;'></image>
+            <view class='class_tit position_a' style='left:0;font-size:21.7rpx'>{{item.title}}</view>
+            <view class='class_banner position_a' style='left:0;top:52%;font-size:21.7rpx'>{{item.banner}}</view>
+            <view class='study_now position_a' style='font-size:21.7rpx;top:74%;left:48%;'>主讲*{{item.teacher}}</view>
+            <view class='online_class position_a' style='top:0'>直播课</view>
+          </view>
+          <view class='right' style='width:56%'> 
+            <view class='public_content'>{{item.title}}:{{item.banner}}</view>
+            <view style='padding:32rpx 0;font-size:25.3rpx'>
+              <text class='class_type'>{{item.subject_type}}</text>丨
+              <text class='begin_time'>今天20：00开始</text>
+            </view>
+            <view class='public_class_footer'>
+              <text class='class_pay' style='color:#f36e07'>¥{{item.now_price}}</text>
+              <text class='class_sign right'>{{item.reg_number}}人已报名</text>
+            </view>
+          </view>
+          <view class='clearfix'></view>
+        </view>
+      </view>
+  </view>
+</view>
+</scroll-view>
+<view class="body-view">
+<loading hidden="{{hidden}}" bindchange="loadingChange">
+      加载中...
+ </loading>
+</view>
+<view style='width:100%;height:120rpx;'></view>
+
+

@@ -1,0 +1,74 @@
+/* pages/nav/info/info.wxss */
+@import '../../moban/fonts/iconfont.wxss';
+@import '../../moban/conclude/conclude.wxss';
+@import '../../moban/footer/footer.wxss';
+.toinfo{
+  color: #fe6d04;
+}
+.message_{
+  width: 100%;
+}
+.menu_message{
+  padding: 12rpx 4%;
+  margin: 24rpx 0;
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+}
+.menu_message_tit_l{
+  font-size: 28rpx;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.icon-tongzhi,.td_l_image{
+  font-size: 56rpx;
+  color: #fe6d04;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  padding: 6rpx;
+  border-radius: 12rpx;
+  background: #f3f3f3;
+}
+.td_l_image{
+  height: 84rpx;
+  width: 84rpx;
+  border-radius: 30%;
+}
+.menu_message_content{
+  display: inline-block;
+  width: 100%;
+}
+.menu_message_content text{
+  font-size: 24rpx;
+  display: inline-block;
+  white-space: nowrap; 
+  text-overflow:ellipsis;
+  overflow:hidden; 
+  padding: 12rpx;
+  width: 100%;
+  color: #a3a3a3;
+}
+.td_r,.td_l{
+  vertical-align: bottom;
+}
+.menu_message_tit_r{
+  font-size: 24rpx;
+  color: #a3a3a3;
+}
+.td_l{
+  position: relative;
+}
+.td_r{
+  width: 85%;
+}
+.menu_message_tit_h{
+  font-size: 24rpx;
+  padding: 3rpx 12rpx;
+  color: #3a3a3a;
+  border-radius: 12rpx;
+  border: solid 1px #3a3a3a;
+  margin-right: 24rpx;
+}

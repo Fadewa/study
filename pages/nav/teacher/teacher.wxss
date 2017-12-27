@@ -1,0 +1,117 @@
+/* pages/nav/teacher/teacher.wxss */
+@import '../../moban/fonts/iconfont.wxss';
+@import '../../moban/conclude/conclude.wxss';
+@import '../../moban/footer/footer.wxss';
+page{
+  height: 100%;
+}
+.toteacher{
+  color: #fa6805;
+}
+.teacher_banner image{
+  height: 320rpx;
+  width: 100%;
+}
+.teacher_select{
+  background: #fff;
+  padding: 0 4% 24rpx;
+}
+form{
+  display: block;
+}
+.contact_info{
+  width: 100%;
+}
+.tit{
+  padding: 24rpx 0;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.contact_info .left,.contact_info .right,
+.mobile{
+  background: #f6f6f6;
+  font-size: 30rpx;
+}
+input{
+  padding: 16rpx;
+}
+input:hover{
+  border:solid 1px #fa6805;
+}
+.contact_info .left{
+  width: 40%;
+}
+.contact_info .right{
+  width: 56%;
+  margin-left: 4%;
+}
+.mobile{
+  margin-top: 24rpx;
+}
+button{
+  background: #fa6805;
+  color: #fff;
+  font-size: 30rpx;
+  margin-top: 24rpx;
+}
+/****承诺****/
+.promises{
+  padding: 24rpx 4%;
+  margin: 24rpx 0;
+}
+.promises_tit{
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.promise_li{
+  display: table;
+}
+.promise_li_r,.promise_li_l{
+  display: table-cell;
+  vertical-align: middle
+}
+.promise_li_l{
+  font-size: 140rpx;
+  color: #868686;
+  padding-right: 24rpx;
+}
+.promise_footer{
+  padding:24rpx 0;
+}
+.promise_footer image{
+  width: 100%;
+}
+.qrcode{
+  margin-bottom: 84rpx;
+  padding: 56rpx 0;
+}
+.totop{
+  position: absolute; 
+  bottom: 120rpx;
+  display: inline-block;
+  font-size: 30rpx;
+  padding: 12rpx 26rpx;
+  border-radius: 36rpx;
+  color: #fff;
+  background: #4f475e;
+  right: 30rpx; 
+}
+.free_subject{
+  bottom: 100rpx;
+  display: table;
+  width: 100%;
+  text-align: center;
+}
+.free_r,.free_l{
+  display: table-cell;
+  vertical-align: middle;
+}
+.free_l{
+  width: 20%;
+  background: #fff;
+}
+.free_r{
+  width: 80%;
+  background: #fa6805;
+  color: #fff;
+}

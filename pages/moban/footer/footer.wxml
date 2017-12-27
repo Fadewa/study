@@ -1,0 +1,29 @@
+<!-- 底部导航  -->
+<template name="footer">
+  <!-- 底部  -->
+  <view class='nav_footer center position_f'>
+    <view class='footer_ul'>
+      <view class='footer_li left toonline' bindtap='toonline'>
+        <view class='iconfont icon-haoke'></view>
+        <text>在线好课</text>
+      </view>
+      <view class='footer_li left toteacher' bindtap='toteacher'>
+        <view class='iconfont icon-liangren'></view>
+        <text>来师1v1</text>
+      </view>
+      <view class='footer_li left tostudy' bindtap='tostudy'>
+        <view class='iconfont icon-shu'></view>
+        <text>学习</text>
+      </view>
+      <view class='footer_li left toinfo' bindtap='toinfo'>
+        <view class='iconfont icon-xiaoxi'></view>
+        <text>消息</text>
+      </view>
+      <view class='footer_li left tome' bindtap='tome'>
+        <view class='iconfont icon-wode'></view>
+        <text>我的</text>
+      </view>
+      <view class='clearfix'></view>
+    </view>
+  </view>
+</template>

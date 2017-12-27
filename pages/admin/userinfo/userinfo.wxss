@@ -1,0 +1,60 @@
+/* pages/admin/userinfo/userinfo.wxss */
+@import '../../moban/fonts/iconfont.wxss';
+@import '../../moban/conclude/conclude.wxss';
+.user{
+  margin: 48rpx 4%;
+}
+.section input{
+  display: inline-block;
+  height: 1.4rem;
+  line-height: 1.4rem
+}
+.section_header{
+  padding:24rpx;
+}
+.section_header>text{
+  display: inline-block;
+  height: 1.4rem;
+  line-height: 1.4rem;
+}
+.section_header>input{
+  display: inline-block;
+  width: 95%;
+}
+.userimg{
+  color: #a3a3a3;
+  background: #fff;
+  padding: 16rpx 0;
+  border-top: solid 1px #d3d3d3;
+  width: 100%;
+  margin-top: 12rpx;
+}
+.td_r{
+  text-align: right;
+}
+.userimg>.td image{
+  border-radius: 50%;
+  height: 72rpx;
+  width: 72rpx;
+}
+.section_body{
+  margin-top: 56rpx;
+  padding: 12rpx 24rpx;
+}
+.body_li{
+  padding: 24rpx 0;
+  border-bottom: solid 1px #d3d3d3;
+  width: 100%;
+}
+.td_h{
+  width: 25%;
+}
+.td_m{
+  width: 69%;
+}
+.body_ul>.body_li:last-child{
+  border: none;
+}
+.td{
+  vertical-align: middle;
+}

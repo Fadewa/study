@@ -1,0 +1,89 @@
+<!--pages/nav/study/study.wxml-->
+<!-- 底部导航条  -->
+<import src="../../moban/footer/footer.wxml"/>
+<template is="footer"/>
+
+<view class='study'>
+  <view class='study_header center white'>
+    <view class='study_tit'>
+      <text class="study_subject {{subject?'active':''}}" bindtap='subject'>课程</text>
+      <text class="study_table {{table?'active':''}}" bindtap='table'>课表</text>
+    </view>
+    <view class='subject_ul' wx:if="{{subject}}">
+      <view class="subject_li left {{sub_1?'show':''}}" bindtap='sub_1'>直播课</view>
+      <view class="subject_li left {{sub_2?'show':''}}" bindtap='sub_2'>视频课</view>
+      <view class="subject_li left {{sub_3?'show':''}}" bindtap='sub_3'>1对1</view>
+      <view class="subject_li left {{sub_4?'show':''}}" bindtap='sub_4'>线下对课</view>
+      <view class='clearfix'></view>
+    </view>
+    <view class='table_ul' wx:if="{{!subject}}">
+      <picker mode="date" value="{{date_s}}" start="2015-09-01" end="2100-09-01" bindchange="bindDateChange_s" class='left'>
+        <view class="picker picker_l">
+          起始时间: <text>{{date_s}}</text>
+        </view>
+      </picker>
+      <picker mode="date" value="{{date_e}}" start="2015-09-01" end="2100-09-01" bindchange="bindDateChange_e" class='right'>
+        <view class="picker">
+          结束时间: <text>{{date_e}}</text>
+        </view>
+      </picker>
+      <view class='clearfix'></view>
+    </view>
+  </view>
+  <!-- 尚未完结的课程  -->
+  <view wx:if="{{subject}}">
+    <view class='subject_summary_ul'>
+      <view class='subject_summary_li white' wx:for="{{summary}}" wx:key='nav' wx:for-item="item">
+        <view class='summary_l'>
+          <image src='{{item.teacher_photo}}' style='border-radius:100%;'></image>
+          <view>{{item.teacher_name}}</view>
+        </view>
+        <view class='summary_r'>
+          <view class='summary_title'>{{item.title}}</view>
+          <view class='summary_lesson'>共{{item.lesson}}节课</view>
+          <view class='summary_duration'><text decode='true'>今天&nbsp;&nbsp;{{item.duration}}</text></view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 完结的课程  -->
+    <view class='subject_summary_ul over' wx:if="{{over}}">
+      <view class='over_tit'>以下课程已完结</view>
+      <view class='subject_summary_li white' wx:for="{{summary_over}}" wx:key='nav' wx:for-item="item">
+        <view class='summary_l'>
+          <image src='{{item.teacher_photo}}' style='border-radius:100%;'></image>
+          <view>{{item.teacher_name}}</view>
+        </view>
+        <view class='summary_r'>
+          <view class='summary_title'>{{item.title}}</view>
+          <view class='summary_lesson'>共{{item.lesson}}节课</view>
+          <view class='summary_duration'><text decode='true'>今天&nbsp;&nbsp;{{item.duration}}</text></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 课表  -->
+  <view class='table_' wx:if="{{!subject}}">
+    <view class='table_time'>2017年12月15日 周五</view>
+    <view class='table_summary center white'>
+      <view class='table_summary_l'>
+        <view class='table_summary_l_time' style='font-weight:600;'>19：00</view>
+        <view class='table_summary_l_condition' style='font-size:24rpx;'>即将进行</view>
+        <view class='table_summary_l_count' style='font-size:24rpx;'>第几节</view>
+      </view>
+      <view class='table_summary_r'>
+        <view class='table_summary_r_header'>
+          <text class='header_type'>直播课</text>
+          <text>身体的智慧</text>
+        </view>
+        <view class='table_summary_r_teacher'>
+          <image src='../../image/t2.jpg'></image>
+          <text>张老师</text>
+        </view>
+        <view class='table_summary_r_chat'>班级群</view>
+      </view>
+    </view>
+  </view>
+</view>

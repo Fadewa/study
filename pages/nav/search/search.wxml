@@ -1,0 +1,33 @@
+<!--pages/nav/search/search.wxml-->
+<view class='search position_r white'>
+  <text class='left position_a' style='left:6%;top:50%;transform:translate(0,-50%);'>搜{{smth}}</text>
+  <input confirm-type='search' class='left' placeholder='可以切换老师、机构和课程搜索'></input>
+  <text class='left cansle' bindtap='toindex'>取消</text>
+  <view class='clearfix'></view>
+</view>
+<view class='search_ul white'>
+  <view class='search_li left' wx:for="{{search_items}}" wx:key='search' wx:for-item="item" style='background:{{item.color}}' bindtap='choose_type' data-num='{{index}}'>
+    <text>{{item.something}}</text>
+  </view>
+  <view class='clearfix'></view>
+</view>
+<!-- 热门搜索  -->
+<view class='hot_search'>
+  <view class='hot_tit'>热门搜索</view>
+  <view class='hot_ul'>
+    <view class='hot_li left center' wx:for="{{hotitems}}" wx:key='hot' wx:for-item="item" data-hotlink='{{index}}' bindtap='storage'>
+      {{item.title}}
+    </view>
+    <view class='clearfix'></view>
+  </view>
+</view>
+<!-- 历史搜索记录  -->
+<view class='history_search' style="display:{{showhis?'none':'block'}}">
+  <view class='history_tit'>历史记录</view>
+  <view class='history_ul'>
+    <view class='history_li' wx:for="{{historyitems}}" wx:key='history' wx:for-item="item" data-historylink='{{index}}'>
+      {{item.title}}
+    </view>
+    <view class='clear_history white center' bindtap='clearstorage'>清除历史记录</view>
+  </view>
+</view>

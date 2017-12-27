@@ -1,0 +1,50 @@
+<!--pages/nav/teacher/teacher.wxml-->
+<import src="../../moban/footer/footer.wxml"/>
+<template is="footer"/>
+<scroll-view style="height: 100%;" scroll-y="true" scroll-top="{{scrollTop.scroll_top}}" bindscroll="scrollTopFun">  
+  <view class='teacher_banner'>
+    <image src='../../image/1v1.png'></image>
+  </view>
+  <view class='teacher_select'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='center tit'>免费领取价值<text style='color:#f86c00;'>200</text>元1对1的试听课</view>
+    <view class='contact_info'>
+      <view class='left'><input value='{{forfree.name}}' name="name" placeholder="您的姓名" /></view>
+      <view class='right'><input value='{{forfree.subject}}' name="subject" placeholder="您要学习的科目" /></view>
+      <view class='clearfix'></view>
+    </view>
+    <input class='mobile' value='{{forfree.mobile}}' name="mobile" placeholder="您的手机号码，方便顾问联系" />
+    <button formType="submit">立即领取</button>
+    </form>
+  </view>
+  <!-- 承诺  -->
+  <view class='promises white'>
+    <view class='promises_tit'>我们的承诺</view>
+    <view class='promise_ul'>
+      <view class='promise_li' wx:for="{{promises}}" wx:key='promises' wx:for-item="item">
+        <view class='promise_li_l iconfont icon-{{item.icon}}'></view>
+        <view class='promise_li_r'>
+          <view style='font-size:36rpx;font-weight:400;padding:24rpx 0;'>{{item.title}}</view>
+          <view style='color:gray;'>{{item.content}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='promise_footer '>
+    <view><image src='../../image/teacher_1.png'></image></view>
+    <view class='qrcode center white'>
+      <image src='../../image/teacher_3.png' style='width:210rpx;height:210rpx;padding-right:56rpx;'></image>
+      <image src='../../image/teacher_2.png' style='width:210rpx;height:210rpx;padding-left:56rpx;'></image>
+    </view>
+  </view>
+</scroll-view>
+<view class='totop iconfont icon-dianhua' wx:if="{{scrollTop.mobile}}" bindtap='makecall'>
+  免费通话
+</view>
+<view class='free_subject position_a' wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun">
+  <view class='free_l iconfont icon-dianhua' catchtap='makecall'>
+    <view>免费通话</view>
+  </view>
+  <view class='free_r'><text>领取0元试听课</text></view>
+</view>
+

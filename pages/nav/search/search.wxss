@@ -1,0 +1,57 @@
+/* pages/nav/search/search.wxss */
+@import '../../moban/conclude/conclude.wxss';
+.search{
+  font-size: 26rpx;
+  line-height: 1.4rem;
+  padding: 0 4%;
+  color: #a6a6a6;
+}
+.cansle{
+  padding-left: 16rpx;
+  color: #e17400;
+  text-decoration: underline;
+}
+.search input{
+  font-size: 22rpx;
+  padding:12rpx 0 12rpx 130rpx; 
+  width: 70%;
+  background: #f9f9f9;
+}
+.search_ul{
+  font-size: 26rpx;
+  padding: 0 4%;
+}
+.search_li{
+  padding: 12rpx 24rpx;
+}
+/****热搜****/
+.hot_search,.history_search{
+  margin-top: 36rpx;
+  padding-left: 4%;
+}
+.hot_tit,.history_tit{
+  font-size: 26rpx;
+  color: #b0b0b0;
+}
+.hot_li{
+  font-size:26rpx;
+  width: 28%;
+  margin: 2%;
+  background: #fff;
+  line-height:64rpx ;
+}
+/****历史记录****/
+.history_li{
+  background: #fff;
+  border-bottom: solid 1px #ddd;
+  font-size: 26rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  padding-left: 4%;
+}
+.clear_history{
+  font-size: 26rpx;
+  color: #b0b0b0;
+  height: 64rpx;
+  line-height: 64rpx;
+}

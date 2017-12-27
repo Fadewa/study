@@ -1,0 +1,24 @@
+{
+  "pages":[
+
+
+    "pages/nav/search/search_detail/search_detail",
+    "pages/index/index",
+    "pages/details/details",
+    "pages/nav/info/info",
+    "pages/admin/register/register",
+    "pages/admin/login/login",
+    "pages/nav/me/me",
+    "pages/admin/userinfo/userinfo",
+    "pages/nav/study/study",
+    
+    "pages/nav/teacher/teacher",
+    "pages/nav/search/search",
+    
+    
+    "pages/moban/date/date"
+  ],
+  "window":{
+    
+  }
+}

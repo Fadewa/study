@@ -1,0 +1,97 @@
+/* pages/nav/me/me.wxss */
+@import '../../moban/fonts/iconfont.wxss';
+@import '../../moban/conclude/conclude.wxss';
+@import '../../moban/footer/footer.wxss';
+.tome{
+  color: #fe6d04;
+}
+.me_header_img image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.me_header{
+  display: table;
+  width: 92%;
+  background: #ff6d00;
+  color: #fff;
+  padding: 24rpx 4%;
+}
+.me_header_r,.me_header_l,.me_header_m{
+  display: table-cell;
+  vertical-align: middle;
+}
+.me_header_r{
+  text-align: right;
+}
+.me_header_r>view{
+  display: inline-block;
+  font-size: 24rpx;
+  padding: 6rpx 12rpx 6rpx 24rpx;
+  border-radius: 24rpx;
+  background: #ff8832;
+}
+.me_header_r .iconfont{
+  font-size: 24rpx;
+  padding-left: 12rpx;
+}
+.me_header_mobile{
+  font-size: 24rpx;
+  padding-top: 24rpx;
+}
+/***账单***/
+.lists{
+  padding: 24rpx 4%;
+  margin-top: 12rpx;
+}
+.table{
+  width: 100%;
+  text-align: center;
+}
+.td{
+  width: 33.3%;
+  border-right: solid 1px #c7c7c7;
+}
+.table>.td:last-child{
+  border: none;
+}
+.table>.td:nth-child(2){
+  width: 33%
+}
+.td>.iconfont{
+  font-size: 42rpx;
+  color: #fff;
+  display: inline-block;
+  padding: 18rpx;
+  border-radius: 50%;
+  background: #42a4ef;
+}
+/***课程概况***/
+.my_course{
+  padding: 12rpx 4%;
+  margin: 24rpx 0;
+}
+.my_course.footer_{
+  margin-bottom: 140rpx;
+}
+.my_course .left{
+  line-height: 48rpx;
+}
+.left text,.right text{
+  vertical-align: middle;
+}
+.right text{
+  font-size: 24rpx;
+  color: #9c9c9e;
+}
+.my_course_table .left>.iconfont{
+  padding-right: 24rpx;
+  font-size: 48rpx;
+  color: #a1a1a3;
+}
+.my_course_table{
+  padding: 12rpx 0;
+  margin-bottom: 12rpx;
+  border-bottom: solid 1px #fcfcfc;
+}
+

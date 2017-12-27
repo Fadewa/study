@@ -1,0 +1,188 @@
+<!--pages/nav/me/me.wxml-->
+<!-- 底部导航条  -->
+<import src="../../moban/footer/footer.wxml"/>
+<template is="footer"/>
+<view class='me_header white'>
+  <view class='me_header_l'>
+    <view class='me_header_img'>
+      <image src='../../image/default.jpg' wx:if="{{show}}"></image>
+      <block wx:else>
+        <image src='{{imgUrl}}'></image>
+      </block>
+    </view>
+  </view>
+  <view class='me_header_m'>
+    <view class='me_header_nickeName' wx:if="{{show}}" bindtap='login_in'>立即登录</view>
+    <block wx:else>
+      <view class='me_header_nickeName'>{{name}}</view>
+      <view class='me_header_mobile'>{{mobile}}</view>
+    </block>
+  </view>
+  <view class='me_header_r'>
+    <view bindtap='user_info'>
+      <text>个人信息</text>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+  </view>
+</view>
+<!-- 账单  -->
+<view class='lists white'>
+  <view class='table'>
+    <view class='td'>
+      <text class='iconfont icon-dingdan'></text>
+      <text>订单</text>
+    </view>
+    <view class='td'>
+      <text class='iconfont icon-qianbao'></text>
+      <text>钱包</text>
+    </view>
+    <view class='td'>
+      <text class='iconfont icon-youhuiquan'></text>
+      <text>优惠券</text>
+    </view>
+  </view>
+</view>
+<!-- 课程记录  -->
+<view class='my_course white'>
+  <view class='my_course_table'>
+    <view class='left'>  
+      <text class='iconfont icon-wodekecheng'></text>
+      <text>我的课程</text>
+    </view>
+    <view class='right'>
+      <text>我的课程</text>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+
+  <view class='my_course_table'>
+    <view class='left'>  
+      <text class='iconfont icon-shouyewodeshipin'></text>
+      <text>我的视频课</text>
+    </view>
+    <view class='right'>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+
+  <view class='my_course_table'>
+    <view class='left'>  
+      <text class='iconfont icon-xiazai'></text>
+      <text>我的下载与回放</text>
+    </view>
+    <view class='right'>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+</view>
+
+<!-- 学习阶段  -->
+<view class='my_course white'>
+  <view class='my_course_table'>
+    <view class='left'>  
+      <text class='iconfont icon-wodekecheng'></text>
+      <text>我的学习阶段</text>
+    </view>
+    <view class='right'>
+      <text>选择身份</text>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+
+  <view class='my_course_table'>
+    <view class='left'>  
+      <text class='iconfont icon-shoucang'></text>
+      <text>我的收藏</text>
+    </view>
+    <view class='right'>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+
+  <view class='my_course_table'>
+    <view class='left'>  
+      <text class='iconfont icon-tiwen'></text>
+      <text>我的提问</text>
+    </view>
+    <view class='right'>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+
+  <view class='my_course_table'>
+    <view class='left'>  
+      <text class='iconfont icon-sps'></text>
+      <text>我的评价</text>
+    </view>
+    <view class='right'>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+
+  <view class='my_course_table'>
+    <view class='left'>  
+      <text class='iconfont icon-llrefundmessageicon'></text>
+      <text>学分商城</text>
+    </view>
+    <view class='right'>
+      <text>学分兑好礼</text>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+
+  <view class='my_course_table'>
+    <view class='left'>  
+      <text class='iconfont icon-faxian'></text>
+      <text>发现</text>
+    </view>
+    <view class='right'>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+
+</view>
+
+<!-- 设置  -->
+<view class='my_course white  footer_'>
+  <view class='my_course_table'>
+    <view class='left'>  
+      <text class='iconfont icon-iconfontzhizuobiaozhun49'></text>
+      <text>邀请好友</text>
+    </view>
+    <view class='right'>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+
+  <view class='my_course_table'>
+    <view class='left'>  
+      <text class='iconfont icon-fankui'></text>
+      <text>帮助与反馈</text>
+    </view>
+    <view class='right'>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+
+  <view class='my_course_table'>
+    <view class='left'>  
+      <text class='iconfont icon-ttpodicon'></text>
+      <text>设置</text>
+    </view>
+    <view class='right'>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+</view>

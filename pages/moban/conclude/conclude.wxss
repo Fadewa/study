@@ -1,0 +1,41 @@
+/*  全局样式引用的样式  */
+page{
+  background: #f1f5f6;
+  font-size: 30rpx;
+}
+.table{
+  display: table;
+}
+.td{
+  display: table-cell;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.clearfix{
+  clear: both;
+}
+.center{
+  text-align: center;
+}
+.position_r{
+  position: relative;
+}
+.position_a{
+  position: absolute;
+}
+.position_f{
+  position: fixed;
+}
+.widthfull{
+  width: 100%;
+}
+.white{
+  background: #fff;
+}
+.wrapper{
+  padding: 0 4%;
+}

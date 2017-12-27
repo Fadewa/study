@@ -1,0 +1,69 @@
+<!--pages/nav/search/search_detail/search_detail.wxml-->
+<view class='search position_r white'>
+  <text class='left position_a' style='left:6%;top:50%;transform:translate(0,-50%);'>搜{{smth}}</text>
+  <input class='left' bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" bindconfirm='wxSearchFn' confirm-type='search' placeholder="可以切换老师、机构和课程搜索"/>
+  <text class='left cansle' bindtap='toindex'>取消</text>
+  <view class='clearfix'></view>
+</view>
+<view class='search_ul white'>
+  <view class='search_li left' wx:for="{{search_items}}" wx:key='search' wx:for-item="item" style='background:{{item.color}}' bindtap='choose_type' data-num='{{index}}' >
+    <text>{{item.something}}</text>
+  </view>
+  <view class='clearfix'></view>
+</view>
+<view class='search_types white'>
+  <view class='search_types_ul'>
+    <view class='search_types_li' wx:for="{{types}}" wx:key='' wx:for-item="item" bindtap='_type' data-index='{{index}}'>{{item}}
+    <block wx:if="{{index!=0}}">
+      <text wx:if="{{isclick==index}}"> ▲</text>
+      <text wx:else> ▼</text>
+    </block>
+    </view>
+  </view>
+</view>
+<block wx:if="{{isSubject}}">
+  <view class='subject_body table position_f'>
+    <view class='td td_l'>
+      <view class="{{ishover==index?'on':''}}" wx:for='{{subject}}' wx:key='' wx:for-item="item" data-id='{{index}}' bindtap='toon'>
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view class='td td_r'></view>
+  </view>
+</block>
+<!-- 老师课程搜索结果展示  -->
+<view class='teacher_show white' wx:for="{{searchData}}" wx:key='' wx:for-item="item" data-id='{{item.id}}' catchtap='todetail'>
+  <view class='up_show table'>
+    <view class='td'>
+      <image src='{{item.src}}'></image>
+    </view>
+    <view class='td'>
+      <view class='top'>
+        <view class='left show_teacher'>{{item.teacher}}</view>
+        <view class='right'>南通博大教育</view>
+        <view class='clearfix'></view>
+      </view>
+      <view class='self_comment'>
+        <view>8年教龄</view>
+        <view>名校毕业</view>
+        <view>培养高分学员</view>
+        <view>提分快</view>
+        <view>效果明显</view>
+      </view>
+      <view class='self_honor'>大市数学学科带头人，中国数学学会带头人</view>
+      <view class='middle'>
+        <text class='comment_goal'>5.0分  </text>
+        <text>评价505</text>
+        <text class='right'>玉山  18.6km</text>
+      </view>
+    </view>
+  </view>
+  <view class='footer_show table'>
+    <view class='td type_class'><text>视频课</text></view>
+    <view class='td'>
+      <view style='font-size:28rpx;color:#000;'>{{item.title}}</view>
+      <text style='color:green;font-size:28rpx;'>{{item.now_price}}</text>
+      <text class='right' style='font-size:26rpx;'>播放662次</text>
+    </view>
+  </view>
+</view>
