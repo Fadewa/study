@@ -44,8 +44,8 @@
 </view>
 <!-- 课程记录  -->
 <view class='my_course white'>
-  <view class='my_course_table'>
-    <view class='left'>  
+  <view class='my_course_table' bindtap='tocurse'>
+    <view class='left' >  
       <text class='iconfont icon-wodekecheng'></text>
       <text>我的课程</text>
     </view>
@@ -175,7 +175,7 @@
     <view class='clearfix'></view>
   </view>
 
-  <view class='my_course_table'>
+  <view class='my_course_table' bindtap='settings'>
     <view class='left'>  
       <text class='iconfont icon-ttpodicon'></text>
       <text>设置</text>

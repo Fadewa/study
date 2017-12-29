@@ -2,13 +2,15 @@
 <!-- 底部导航条  -->
 <import src="../../moban/footer/footer.wxml"/>
 <template is="footer"/>
+<view class='center white header_'>
+  <view class='study_tit '>
+    <text class="study_subject {{subject?'active':''}}" bindtap='subject'>课程</text>
+    <text class="study_table {{table?'active':''}}" bindtap='table'>课表</text>
+  </view>
+</view>
 
-<view class='study'>
+<view class='study' wx:if="{{islogin}}">
   <view class='study_header center white'>
-    <view class='study_tit'>
-      <text class="study_subject {{subject?'active':''}}" bindtap='subject'>课程</text>
-      <text class="study_table {{table?'active':''}}" bindtap='table'>课表</text>
-    </view>
     <view class='subject_ul' wx:if="{{subject}}">
       <view class="subject_li left {{sub_1?'show':''}}" bindtap='sub_1'>直播课</view>
       <view class="subject_li left {{sub_2?'show':''}}" bindtap='sub_2'>视频课</view>
@@ -87,3 +89,12 @@
     </view>
   </view>
 </view>
+<block wx:else>
+  <view class='no_info center'>
+    <text>立即登录，查看你买过的课程</text>
+  </view>
+  <view class='btns'>
+    <view class='btn_r' bindtap='register'>注册</view>
+    <view class='btn_l' bindtap='login'>登录</view>
+  </view>
+</block>

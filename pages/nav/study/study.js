@@ -22,6 +22,7 @@ Page({
     navs.navs.tome()
   },
   data: {
+    islogin:true,
     subject:true,
     table:false,
     over:false,
@@ -223,10 +224,34 @@ Page({
       date_e: e.detail.value
     })
   },
+  //注册与登录
+  register:function(){
+    wx.navigateTo({
+      url: '/pages/admin/register/register',
+    })
+  },
+  login: function () {
+    wx.navigateTo({
+      url: '/pages/admin/login/login',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that= this
+    wx.getStorage({
+      key: 'password',
+      success: function(res) {
+        that.setData({
+          islogin:true
+        })
+      },fail:function(){
+        that.setData({
+          islogin: false
+        })
+      }
+    })
     this.setData({
       summary: this.data.summary_1,
       summary_over: this.data.summary_over_1,

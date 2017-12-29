@@ -35,7 +35,17 @@ Page({
     mobile:'',
     img_id:''
   },
-
+  tocurse:function(){
+    wx.redirectTo({
+      url: '/pages/nav/study/study',
+    })
+  },
+  //设置
+  settings:function(){
+    wx.navigateTo({
+      url: '/pages/settings/settings',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

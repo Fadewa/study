@@ -15,17 +15,22 @@ Page({
     ],
     smth: '老师',
     inputValue: '',
-    isclick:0,
+    isclick:-1,
     hasarrow:true,
     isSubject:false,
     ishover:0,
     types:['在线授课','全部科目','全部区域','筛选'],
-    subject: ['全部', '幼小', '初中', '高中', '大学', '艺术', '生活', '体育', '出国', '语言', '职业']
+    subject: [
+      [],
+      ['全部', '幼小', '初中', '高中', '大学', '艺术', '生活', '体育', '出国', '语言', '职业'],
+      ['全部区域', '平江区', '金阊区', '虎丘区', '大学', '艺术', '生活', '体育', '出国', '语言', '职业'],
+      []
+      ]
   },
   //课程显示
   toon:function(e){
     var id = e.currentTarget.dataset.id
-    for (var i = 0; i < this.data.subject.length;i++){
+    for (var i = 0; i < this.data.subject[this.data.isclick].length;i++){
       if(i==id){
         this.setData({
           ishover:id
@@ -33,14 +38,29 @@ Page({
       }
     }
   },
+  //模态框的控制按钮
+  open_btn:function(){
+    this.setData({
+      isclick: 4,
+      hasarrow: true
+    })
+  },
   //选择课程种类
   _type:function(e){
     var id = e.currentTarget.dataset.index
     for (var i = 0; i < this.data.types.length; i++) {
       if (i == id) {
-        this.setData({
-          isclick:i
-        })
+        if (this.data.isclick != i){
+          this.setData({
+            isclick: i,
+            hasarrow:false
+          })
+         }else{
+          this.setData({
+            isclick: 4,
+            hasarrow: true
+          })
+         }
       }
     }
   },
@@ -81,8 +101,9 @@ Page({
 
   },
   //搜索时
-  wxSearchFn:function(){
-    this.data.hisData.push(this.data.inputValue)
+  wxSearchFn:function(e){
+    console.log(e.detail.value)
+    var value = e.detail.value
     var data=[];
     var localStorageValue = [];
     var inputValue = new RegExp(this.data.inputValue)
@@ -96,11 +117,17 @@ Page({
         data.push(aa)
       }
     }
-    app.globalData.teacher=data
+    app.globalData.teacher = data
     this.setData({
       searchData:data
-    }) 
-    console.log('-----'+this.data.hisData+'---')
+    })
+    this.data.hisData.push(value)
+      wx.setStorage({
+        key: 'hisData',
+        data: {
+          hisData: this.data.hisData
+        }
+      })
   },
   //跳转搜索到的详情界面
   todetail:function(e){
@@ -112,6 +139,13 @@ Page({
   },
   onLoad: function (optins) {
     var that = this
+    wx.getStorage({
+      key: 'hisData',
+      success: function(res) {
+        console.log(res.data)
+        that.data.hisData=res.data.hisData
+      }
+    })
     wx.request({
       url: 'https://app.lovejia.net/zxxx/index.php?s=/w16/Demotest/Demotest/swiper122',
       header: {

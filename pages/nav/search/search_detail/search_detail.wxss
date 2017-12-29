@@ -32,21 +32,27 @@
   background: #fcfcfc;
   color: #767676;
   font-size: 24rpx;
+  position: relative;
+  z-index: 2;
 }
 .search_types_li{
   padding: 6rpx; 
   position: relative;
+  z-index: 99;
 }
- .search_types_li:hover {
+.search_types_li:hover{
+    border: solid 1px #ff6d00;
+}
+ .type_tit {
   color: #ff6d00;
-  border: solid 1px #ff6d00;
 }  
 .subject_body{
   text-align: center;
   background: #fff;
   width: 100%;
   left: 0;
-  top:16%;
+  top:15.9%;
+  z-index: 99;
 }
 .td_l{
   padding:  0 0 4%;
@@ -122,4 +128,12 @@
 }
 .footer_show .td{
   vertical-align: middle;
+}
+.model_{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,.3);
+  z-index: -1;
 }
