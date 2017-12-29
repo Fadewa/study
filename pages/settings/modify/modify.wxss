@@ -1,0 +1,30 @@
+/* pages/settings/modify/modify.wxss */
+@import '../../moban/conclude/conclude.wxss';
+.modify{
+  padding: 24rpx 4%;
+  line-height: 64rpx;
+}
+.table{
+  width: 100%;
+  background: #fff;
+}
+.td_l{
+  width: 75%;
+  padding: 8rpx;
+}
+.td_r{
+  background: #427bbe;
+  color: #fff;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 26rpx;
+  border-radius: 8rpx;
+}
+.ipt_psw{
+  margin: 24rpx 0;
+  padding: 8rpx;
+}
+button{
+  background: #f9c07b;
+  color: #fff;
+}

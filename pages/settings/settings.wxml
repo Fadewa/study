@@ -1,0 +1,91 @@
+<!--pages/settings/settings.wxml-->
+<view class='settings'>
+  <block wx:if="{{show}}">
+    <view class='setting_h white'>
+      <view class='my_course_table' bindtap='modify'>
+        <view class='left'>  
+          <text>修改登录密码</text>
+        </view>
+        <view class='right'>
+          <text class='iconfont icon-jiantouyou'></text>
+        </view>
+        <view class='clearfix'></view>
+      </view>
+      <view class='my_course_table'>
+        <view class='left'>  
+          <text>社交账号绑定</text>
+        </view>
+        <view class='right'>
+          <text class='iconfont icon-jiantouyou'></text>
+        </view>
+        <view class='clearfix'></view>
+      </view>
+      <view class='my_course_table'>
+        <view class='left'>  
+          <text>个人隐私设置</text>
+        </view>
+        <view class='right'>
+          <text class='iconfont icon-jiantouyou'></text>
+        </view>
+        <view class='clearfix'></view>
+      </view>
+    </view>
+    <!-- 中间通知设置  -->
+    <view class='settings_tz white'>
+      <view class='my_course_table'>
+        <view class='left'>  
+          <text>通知提醒设置</text>
+        </view>
+        <view class='right'>
+          <text class='iconfont icon-jiantouyou'></text>
+        </view>
+        <view class='clearfix'></view>
+      </view>
+    </view>
+  </block>
+  
+  <!-- 底部  -->
+  <view class='settings_f white'>
+    <view class='my_course_table'>
+      <view class='left'>  
+        <text>下载设置</text>
+      </view>
+      <view class='right'>
+        <text class='iconfont icon-jiantouyou'></text>
+      </view>
+      <view class='clearfix'></view>
+    </view>
+    <view class='my_course_table' bindtap='clearStorage'>
+      <view class='left'>  
+        <text>清除缓存</text>
+      </view>
+      <view class='right'>
+        <text wx:if="{{show}}">{{storage}}kb</text>
+        <text class='iconfont icon-jiantouyou'></text>
+      </view>
+      <view class='clearfix'></view>
+    </view>
+    <view class='my_course_table'>
+      <view class='left'>  
+        <text>客服电话</text>
+      </view>
+      <view class='right'>
+        <text>123456</text>
+        <text class='iconfont icon-jiantouyou'></text>
+      </view>
+      <view class='clearfix'></view>
+    </view>
+    <view class='my_course_table' bindtap='about'>
+      <view class='left'>  
+        <text>关于我们</text>
+      </view>
+      <view class='right'>
+        <text class='iconfont icon-jiantouyou'></text>
+      </view>
+      <view class='clearfix'></view>
+    </view>
+  </view>
+
+  <!-- 退出登录  -->
+  <button type='warn' style='margin-top:56rpx;'>退出登录</button>
+</view>

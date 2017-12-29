@@ -1,0 +1,14 @@
+/* pages/settings/settings.wxss */
+@import '../moban/fonts/iconfont.wxss';
+@import '../moban/conclude/conclude.wxss';
+@import '../moban/footer/footer.wxss';
+.setting_h,.settings_tz,.settings_f{
+  padding: 0 4%;
+  margin: 24rpx 0;
+  line-height: 64rpx;
+  font-size: 30rpx;
+}
+.setting_h>.my_course_table:nth-child(2){
+  border-top: solid 1px #d7d7d7;
+  border-bottom: solid 1px #d7d7d7;
+}
