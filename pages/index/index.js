@@ -137,15 +137,13 @@ Page({
   //跳转详情页
   todetails:function(e){
     var title = e.currentTarget.dataset.title
-    console.log(title)
     wx.navigateTo({
-      url: '/pages/details/details?title=' + title,
+      url: '/pages/courseCategory/live/details?title=' + title,
     })
   },
   //换一批
   changeContent:function(){
     var content = app.globalData.teacher
-    console.log(content)
     var x = this.data.x + 6
     var y = this.data.y + 6
     if(y>(content.length+5)){

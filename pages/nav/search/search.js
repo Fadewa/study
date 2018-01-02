@@ -90,6 +90,12 @@ Page({
       }
     })
   },
+  //输入框获取焦点
+  searchFocus:function(){
+    wx.navigateTo({
+      url: '../../nav/search/search_detail/search_detail',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -72,7 +72,7 @@
   margin: 24rpx 0;
 }
 .my_course.footer_{
-  margin-bottom: 140rpx;
+
 }
 .my_course .left{
   line-height: 48rpx;

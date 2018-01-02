@@ -1,0 +1,128 @@
+<!--pages/courseCategory/video/details.wxml-->
+
+<view class="section tc">
+  <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" controls></video>
+</view>
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar white">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">
+                          <text>{{item}}</text>
+                        </view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                  <view class='class_detail white'>
+                    <view>混职场的若干妙招</view>
+                    <view><text style='color:#fe6b01'>¥10</text></view>
+                    <view class='lists'>
+                      <view>100%好评</view>
+                      <view>23人已报名</view>
+                      <view>383次播放</view>
+                    </view>
+                  </view>
+                  <view class='white free_tit'>
+                    <view class='left'>做好一个好字，解决一切问题</view>
+                    <view class='right'><text>免费试听</text></view>
+                    <view class='clearfix'></view>
+                  </view>
+                  <!-- 课程信息  -->
+                  <view class='subject_info white'>
+                    <view class='subject_info_tit'>课程信息</view>
+                    <view class='subject_info_explain'><text>退款说明：</text>付款后不支持退款</view>
+                    <view class='subject_info_explain' style='color:#479cdc;'><text>观看有效期：</text>付款后180天内有效</view>
+                    <view>特价体验，体验的就是这3个小节，如果更新了会涨价</view>
+                    <image src='../../image/detail.jpg'></image>
+                  </view>
+                  <!-- 老师介绍  -->
+                  <view class='teacher_info white'>
+                    <view class='teacher_info_tit'>老师介绍</view>
+                    <view class='weui-flex'>
+                      <image src='../../image/t3.jpg' style='height:96rpx;width:96rpx;border-radius:50%;margin-right:24rpx;'/>
+                      <view>
+                        <view>孙韶涵</view>
+                        <view>纯干货的承诺</view>
+                      </view>
+                    </view>
+                    <view class='weui-flex center' style='padding:16rpx 0;'>
+                      <view class="weui-flex__item">
+                        <view class="placeholder">
+                          <view>21.5</view>
+                          <view class='getData'>教学时长</view>
+                        </view>
+                      </view>
+                      <view class="weui-flex__item">
+                        <view class="placeholder">
+                          <view>99%</view>
+                          <view class='getData'>好评率</view>
+                        </view>
+                      </view>
+                      <view class="weui-flex__item">
+                        <view class="placeholder">
+                          <view>学生数</view>
+                          <view class='getData'>8009</view>
+                        </view>
+                      </view>
+                    </view>
+                    <view class='weui-flex center'>
+                      <view class='weui-flex__item'>
+                        <view class="placeholder">
+                          <text>TA的课程</text>
+                        </view>
+                      </view>
+                      <view class='weui-flex__item'>
+                        <view class="placeholder">
+                          <text>TA的详情</text>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                  <!-- 课程评价  -->
+                  <view class='course_evaluation white'>
+                    <view class='course_evaluation_tit'>课程信息</view>
+                    <view class='weui-flex'>
+                      <view>
+                        <image  wx:for="{{stars}}" wx:key=""  style='height:28rpx;width:28rpx;margin-right:6rpx;' src='{{item.src}}'></image>
+                        <text style='padding-left:56rpx;'>5分</text>
+                      </view>
+                    </view>
+                    <view class='comment' wx:for="{{comments}}" wx:key="" >
+                      <view class='table'>
+                        <view class='td'>
+                          <image src="{{item.src}}" style='height:64rpx;width:64rpx;border-radius:50%;'></image>
+                        </view>
+                        <view class='td td_comment'>
+                          <view>{{item.userName}}</view>
+                          <view><text>{{item.time}}</text></view>
+                        </view>
+                      </view>
+                      <view>{{item.comment}}</view>
+                    </view>
+                    <view class='center comment_footer'><text>查看2条评价</text></view>
+                  </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                  <view class='comment' wx:for="{{comments}}" wx:key="" >
+                      <view class='table'>
+                        <view class='td'>
+                          <image src="{{item.src}}" style='height:64rpx;width:64rpx;border-radius:50%;'></image>
+                        </view>
+                        <view class='td td_comment'>
+                          <view>{{item.userName}}</view>
+                          <view><text>{{item.time}}</text></view>
+                        </view>
+                      </view>
+                      <view>{{item.comment}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

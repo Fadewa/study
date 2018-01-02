@@ -1,0 +1,40 @@
+<!--pages/pay/pay.wxml-->
+<view class='setting_h white'>
+  <view class='list_h'>
+    <view class='left'>  
+      <text>上课人</text>
+      <text>小小</text>
+      <text>12345678900</text>
+    </view>
+    <view class='right'>
+      <text class='iconfont icon-jiantouyou'></text>
+    </view>
+    <view class='clearfix'></view>
+  </view>
+</view>
+<view class='setting_h white'>
+  <view>课程</view>
+  <view class='list_sub'>
+    <view class='tdl'>
+      <image src='../image/t2.jpg'></image>
+    </view>
+    <view class='tdl'>
+      <view>吴国平</view>
+      <view>系统盈利班第二季</view>
+    </view>
+    <view class='tdl'>
+      <text style='color:#fe6b01;font-weight:600;font-size:30rpx;'>¥5998.00</text>
+    </view>
+  </view>
+</view>
+<view class='setting_h white'>
+  <view class='list_price'>
+    <view>课程总价</view>
+    <view>¥5998.00</view>
+  </view>
+</view>
+<!-- 底部  -->
+<view class='need_pay table white'>
+  <view class='td td_l'>还需支付： ¥5998.00</view>
+  <view class='td td_r'>立即支付</view>
+</view>

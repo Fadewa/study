@@ -70,7 +70,7 @@
         <text>客服电话</text>
       </view>
       <view class='right'>
-        <text>123456</text>
+        <text bindtap='makecall'>123456</text>
         <text class='iconfont icon-jiantouyou'></text>
       </view>
       <view class='clearfix'></view>
@@ -87,5 +87,7 @@
   </view>
 
   <!-- 退出登录  -->
-  <button type='warn' style='margin-top:56rpx;'>退出登录</button>
+  <block wx:if="{{show}}">
+    <button type='warn' style='margin-top:56rpx;'>退出登录</button>
+  </block>
 </view>

@@ -47,14 +47,36 @@ Page({
         people: '郑晓慧',
         talk: '有没有资料可以下载的'
       },
-    ]
+    ],
+    islogin:true,
   },
-
+  register: function () {
+    wx.navigateTo({
+      url: '/pages/admin/register/register',
+    })
+  },
+  login: function () {
+    wx.navigateTo({
+      url: '/pages/admin/login/login',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this
+    wx.getStorage({
+      key: 'password',
+      success: function (res) {
+        that.setData({
+          islogin: true
+        })
+      }, fail: function () {
+        that.setData({
+          islogin: false
+        })
+      }
+    })
   },
 
   /**
@@ -68,7 +90,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    this.onLoad();
   },
 
   /**

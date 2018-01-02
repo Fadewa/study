@@ -1,19 +1,18 @@
 {
   "pages":[
+    "pages/courseCategory/video/details",
     "pages/index/index",
+    "pages/pay/pay",
     "pages/settings/modify/modify",
     "pages/nav/me/me",
-    
     "pages/nav/search/search_detail/search_detail",
     "pages/settings/settings",
-    "pages/details/details",
+    "pages/courseCategory/live/details",
     "pages/nav/info/info",
     "pages/admin/register/register",
     "pages/admin/login/login",
-    
     "pages/admin/userinfo/userinfo",
     "pages/nav/study/study",
-    
     "pages/nav/teacher/teacher",
     "pages/nav/search/search",
     "pages/moban/date/date"

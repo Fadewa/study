@@ -22,19 +22,19 @@ Page({
 
     evaluation:[
       {
-        avatar:'../image/t2.jpg',
+        avatar:'../../image/t2.jpg',
         content:'老师很认真，讲的也好，就是语速有点快了',
         name:'匿名用户',
         time:'2017-12-17'
       },
       {
-        avatar: '../image/t1.jpg',
+        avatar: '../../image/t1.jpg',
         content: '老师很认真，讲的也好，就是语速有点快了',
         name: '小红',
         time: '2017-12-17'
       },
       {
-        avatar: '../image/t3.jpg',
+        avatar: '../../image/t3.jpg',
         content: '老师很认真，讲的也好，就是语速有点快了',
         name: '李四',
         time: '2017-12-17'
@@ -144,7 +144,6 @@ Page({
     wx.showLoading({
       title: '加载中',
     })
-    console.log(options.title)
     var title = options.title
     for (var i = 0; i < app.globalData.teacher.length; i++) {
       if (title == app.globalData.teacher[i].id) {

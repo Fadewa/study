@@ -52,7 +52,6 @@ Page({
         },
         success: function (res) {
           var aa = res.data
-          console.log(aa)
           if (aa) {
             wx.getUserInfo({
               success: function (res) {

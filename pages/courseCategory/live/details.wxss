@@ -1,6 +1,6 @@
 /* pages/details/details.wxss */
-@import '../moban/fonts/iconfont.wxss';
-@import '../moban/conclude/conclude.wxss';
+@import '../../moban/fonts/iconfont.wxss';
+@import '../../moban/conclude/conclude.wxss';
 /* 幻灯片  */
 page{
   height: 100%;

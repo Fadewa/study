@@ -72,3 +72,25 @@
   border: solid 1px #3a3a3a;
   margin-right: 24rpx;
 }
+
+
+.no_info{
+  padding-top: 226rpx;
+  color: #9f9f9f;
+}
+.btns{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 36rpx;
+}
+.btns>view{
+  padding: 12rpx 56rpx;
+}
+.btn_r{
+  border: solid 1px #88abff;
+  color: #88abff
+}
+.btn_l{
+  border: solid 1px #fe6d04;
+  color: #fe6d04
+}

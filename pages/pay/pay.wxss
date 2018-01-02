@@ -1,0 +1,49 @@
+/* pages/pay/pay.wxss */
+@import '../moban/fonts/iconfont.wxss';
+@import '../moban/conclude/conclude.wxss';
+.setting_h,.need_pay{
+  padding: 0 4%;
+  margin: 24rpx 0;
+  line-height: 64rpx;
+  font-size: 30rpx;
+}
+.list_h>.left{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.list_h>.left text{
+  display: inline-block;
+}
+image{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+}
+.list_sub,.list_price{
+  display: flex;
+  justify-content: space-between;
+}
+.tdl{
+  vertical-align: middle;
+}
+.list_price{
+  color: #a3a3a3;
+}
+.need_pay{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  line-height: 96rpx;
+  font-size: 36rpx;
+}
+.td_l{
+  color: #fe6b01;
+}
+.td_r{
+  background: #fe6b01;
+  color: #fff;
+}

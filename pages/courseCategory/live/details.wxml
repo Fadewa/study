@@ -2,7 +2,7 @@
 <scroll-view style="height: 100%;" scroll-y="true" scroll-top="{{scrollTop.scroll_top}}" bindscroll="scrollTopFun">
   <view class='details'>
     <view class='details_header position_r'>
-      <image src="../image/11.jpg" class="slide-image" style='height:320rpx;'></image>
+      <image src="../../image/11.jpg" class="slide-image" style='height:320rpx;'></image>
       <view class='study_now position_a'>主讲*{{teacher.teacher}}</view>
       <view class='class_tit position_a'>{{teacher.title}}</view>
       <view class='class_banner position_a'>{{teacher.banner}}</view>
@@ -34,7 +34,7 @@
 
     <!-- 课程详情  -->
     <view class='subject_particulars'>
-      <image src='../image/detail.jpg'></image> 
+      <image src='../../image/detail.jpg'></image> 
     </view>
     <!-- 课程安排  -->
     <view class='subject_arrangement white'>
@@ -93,11 +93,11 @@
           <view class='td'>
             <view>{{item.name}}</view>
             <view class='table'>
-              <view class='td'><image class='star' src='../image/star.png'></image></view>
-              <view class='td'><image class='star' src='../image/star.png'></image></view>
-              <view class='td'><image class='star' src='../image/star.png'></image></view>
-              <view class='td'><image class='star' src='../image/star.png'></image></view>
-              <view class='td'><image class='star' src='../image/star.png'></image></view>
+              <view class='td'><image class='star' src='../../image/star.png'></image></view>
+              <view class='td'><image class='star' src='../../image/star.png'></image></view>
+              <view class='td'><image class='star' src='../../image/star.png'></image></view>
+              <view class='td'><image class='star' src='../../image/star.png'></image></view>
+              <view class='td'><image class='star' src='../../image/star.png'></image></view>
             </view>
           </view>
         </view>

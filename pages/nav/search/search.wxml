@@ -1,7 +1,7 @@
 <!--pages/nav/search/search.wxml-->
 <view class='search position_r white'>
   <text class='left position_a' style='left:6%;top:50%;transform:translate(0,-50%);'>搜{{smth}}</text>
-  <input confirm-type='search' class='left' placeholder='可以切换老师、机构和课程搜索'></input>
+  <input confirm-type='search' class='left' placeholder='可以切换老师、机构和课程搜索' bindfocus="searchFocus"></input>
   <text class='left cansle' bindtap='toindex'>取消</text>
   <view class='clearfix'></view>
 </view>

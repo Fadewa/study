@@ -27,6 +27,9 @@ Page({
       []
       ]
   },
+  toindex: function () {
+    wx.navigateBack()
+  },
   //课程显示
   toon:function(e){
     var id = e.currentTarget.dataset.id

@@ -1,0 +1,147 @@
+/* pages/courseCategory/video/details.wxss */
+@import '../../moban/conclude/conclude.wxss';
+video{
+  width: 100%;
+  height: 426rpx;
+}
+.video_type{
+  display: flex;
+  justify-content: space-around;
+  font-size: 28rpx;
+  border-bottom: solid 1px #d7d7d7
+}
+.video_type>view{
+  padding: 12rpx 0;
+  border-bottom: solid 2px #fe6b01
+}
+.video_type text{
+  text-decoration: underline;
+  justify-content: space-between
+}
+.class_detail{
+  text-align: left;
+  padding: 12rpx 4%;
+}
+
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+}
+.weui-navbar__title text{
+  text-decoration: underline;
+}
+.weui-navbar__item.weui-bar__item_on{
+  color: #000;
+}
+.weui-navbar__slider{
+  background: #fe6b01;
+}
+.weui-tab__content{
+  padding-top: 12rpx;
+}
+.lists{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 24rpx;
+  color: #a3a3a3;
+}
+.lists>view{
+  padding:0 12rpx;
+  border-right: solid 1px #d7d7d7;
+}
+.lists>view:first-child{
+  padding-left: 0;
+}
+.lists>view:last-child{
+  border: none;
+}
+.free_tit{
+  padding: 0 4%;
+  margin: 16rpx 0;
+  line-height: 72rpx;
+  font-size: 26rpx;
+}
+.free_tit text{
+  padding: 6rpx 4rpx;
+  border: solid 1px #fe6b01;
+  color: #fe6b01;
+}
+
+/* 课程信息  */
+.subject_info,.teacher_info,
+.course_evaluation{
+  text-align: left;
+  padding: 24rpx 4%;
+}
+.subject_info_tit,.teacher_info_tit,
+.course_evaluation_tit{
+  position: relative;
+  padding-left: 24rpx;
+}
+.subject_info_tit:before,
+.teacher_info_tit:before,
+.course_evaluation_tit:before{
+  content: "";
+  height: 30rpx;
+  width: 2px;
+  background: #fe6b01;
+  position: absolute;
+  left: 0;
+  top:50%;
+  transform: translate(0,-50%);
+}
+.subject_info_explain{
+  font-size: 26rpx;
+}
+.subject_info_explain text{
+  color: #a3a3a3;
+}
+.subject_info image{
+  width: 100%;
+  height: 4158rpx;
+}
+/*  老师介绍  */
+.teacher_info{
+  margin: 24rpx 0;
+}
+.placeholder text{
+  display: inline-block;
+  font-size: 26rpx;
+  color: #fe6b01;
+  padding: 12rpx 24rpx;
+  border: solid 1px #fe6b01; 
+}
+.getData{
+  color: #a3a3a3;
+}
+.td{
+  vertical-align: middle;
+}
+.td image{
+  margin-right: 24rpx;
+}
+.comment{
+  padding: 24rpx 0;
+  border-bottom: solid 1px #d7d7d7;
+  font-size: 24rpx;
+}
+.td_comment text{
+  color: #a3a3a3;
+}
+.comment_footer{
+  padding: 24rpx 0;
+}
+.comment_footer text{
+  display: inline-block;
+  font-size: 26rpx;
+  padding: 12rpx 6rpx;
+  border: solid 1px #d7d7d7;
+}
