@@ -58,8 +58,8 @@ Page({
   },
   //跳转搜索页面
   tosearch:function(){
-    wx.redirectTo({
-      url: '../nav/search/search',
+    wx.navigateTo({
+      url: '/pages/nav/search/search_detail/search_detail',
     })
   },
   //跳转来师1v1
@@ -99,40 +99,46 @@ Page({
         color:'#ff5353'
       },
       {
-        classs: 'gaozhong',
-        types: '高中',
-        color: '#ff5353'
+        classs: 'feiji',
+        types: '出国',
+        color: '#66b5f7'
       },
       {
-        classs: 'gaozhong',
-        types: '高中',
-        color: '#ff5353'
+        classs: 'shiyongyingyu',
+        types: '实用英语',
+        color: '#ff9000'
       },
       {
-        classs: 'gaozhong',
-        types: '高中',
-        color: '#ff5353'
+        classs: 'weibiaoti-1',
+        types: '职场技能',
+        color: '#66b5f7'
       },
       {
-        classs: 'gaozhong',
-        types: '高中',
-        color: '#ff5353'
+        classs: 'yishu',
+        types: '艺术体育',
+        color: '#ffb74e'
       },
       {
-        classs: 'gaozhong',
-        types: '高中',
-        color: '#ff5353'
+        classs: 'liren',
+        types: '丽人生活',
+        color: '#ff6d00'
       },
       {
-        classs: 'gaozhong',
-        types: '高中',
-        color: '#ff5353'
+        classs: 'weibiaoti-',
+        types: '家庭教育',
+        color: '#ff8e01'
       },
       {
-        classs: 'gaozhong',
-        types: '高中',
-        color: '#ff5353'
+        classs: 'yingyu',
+        types: '少儿英语',
+        color: '#ff574f'
       },]
+  },
+  navTo:function(e){
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/lists/lists?id=' + id,
+    })
   },
   //跳转详情页
   todetails:function(e){

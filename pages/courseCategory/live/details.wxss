@@ -274,11 +274,10 @@ page{
   border-radius: 50%;
   box-shadow: 0 0 6px #c7c7c7;
   background: #fff;
-}
-.footer_totop text{
   font-size: 36rpx;
   display: block;
-  padding: 12rpx;
+  padding: 16rpx 25rpx;
+  text-align: center;
 }
 .footer_consult{
   font-size: 36rpx;

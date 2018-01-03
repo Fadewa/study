@@ -1,7 +1,9 @@
 {
   "pages":[
-    "pages/courseCategory/video/details",
+    
     "pages/index/index",
+    "pages/lists/lists",
+    "pages/courseCategory/video/details",
     "pages/pay/pay",
     "pages/settings/modify/modify",
     "pages/nav/me/me",

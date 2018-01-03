@@ -124,9 +124,6 @@ Page({
       'scrollTop.scroll_top': _top
     });
   },  
-
-
-  
   /**
    * 生命周期函数--监听页面加载
    */

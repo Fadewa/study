@@ -10,7 +10,7 @@
     <view class='details_content'>
       <view class='details_title'>{{teacher.title}}</view>
       <view class='details_price'>
-        <text class='price_original' style='color:#1cb15d; margin-right:24rpx;font-size:36rpx;'>{{teacher.now_price}}</text>
+        <text style='color:#1cb15d; margin-right:24rpx;font-size:36rpx;'>¥{{teacher.now_price}}</text>
         <text class='price_original'>{{teacher.original_price}}</text>
         <text>已报名{{teacher.reg_number}}人</text>
       </view>
@@ -206,8 +206,7 @@
 
 
 <!-- 咨询与回到顶部  -->
-<view class='footer_totop' style="" wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun">
-  <text class='iconfont icon-arrowUpAdd'></text>
+<view class='footer_totop iconfont icon-arrowUpAdd' style="" wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun">
 </view>
 <view class='footer_consult center'>
   <view class='iconfont icon-dianhua' bindtap='makecall'>咨询</view>

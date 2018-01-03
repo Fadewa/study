@@ -62,7 +62,7 @@
   font-size: 42rpx;
   color: #fff;
   display: inline-block;
-  padding: 18rpx;
+  padding: 12rpx 24rpx;
   border-radius: 50%;
   background: #42a4ef;
 }
@@ -70,9 +70,6 @@
 .my_course{
   padding: 12rpx 4%;
   margin: 24rpx 0;
-}
-.my_course.footer_{
-
 }
 .my_course .left{
   line-height: 48rpx;

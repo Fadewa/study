@@ -97,7 +97,7 @@ button{
   right: 30rpx; 
 }
 .free_subject{
-  bottom: 100rpx;
+  bottom: 108rpx;
   display: table;
   width: 100%;
   text-align: center;

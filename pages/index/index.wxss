@@ -24,14 +24,14 @@ page{
 }
 .icon-search {
   font-size: 36.2rpx;
-  top: 28%;
+  top: 20%;
   left: 8%;
 }
 .icon-qiandao{
   color: #fff;
   font-size: 43.5rpx;
   right: 4%;
-  top: 28%;
+  top: 20%;
 }
 /* 幻灯片  */
 .swiper_1{
@@ -72,6 +72,28 @@ page{
 }
 .iconfont{
   font-size: 43.5rpx;
+}
+.swiper-item{
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24rpx;
+}
+.nav_li{
+  width: 20%;
+  padding-bottom: 24rpx;
+}
+.nav_li>.iconfont{
+  width: 72rpx;
+  height: 72rpx;
+  margin: auto;
+}
+.swiper-item>.nav_li:nth-child(6),
+.swiper-item>.nav_li:nth-child(7),
+.swiper-item>.nav_li:nth-child(8),
+.swiper-item>.nav_li:nth-child(9),
+.swiper-item>.nav_li:last-child{
+  padding-bottom: 96rpx;
 }
 /*  公开课  */
 .public_class{

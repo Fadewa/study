@@ -28,19 +28,17 @@
 <swiper class='swiper_2 white' indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay2}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color='#f46e0f' style='height:360rpx;'>
   <block>
-    <swiper-item >
-      <view class='nav_li left center' data-id='{{index}}' wx:for="{{navitems}}" wx:key='nav' wx:for-item="item" style='width:75rpx;height:75rpx;line-height:75rpx;margin:36rpx 37.5rpx;'>
+    <swiper-item class='weui-flex swiper-item'>
+      <view class='nav_li center' data-id='{{index}}' wx:for="{{navitems}}" wx:key='nav' wx:for-item="item" bindtap='navTo'>
         <view class='iconfont icon-{{item.classs}} ' style="background:{{item.color}};color:#fff;border-radius:50%;"></view>
         <view style='font-size:26rpx;'>{{item.types}}</view>
       </view>
-      <view class='clearfix'></view>
     </swiper-item>
-    <swiper-item >
-      <view class='nav_li left center' data-id='{{index}}' wx:for="{{navitems}}" wx:key='nav' wx:for-item="item" style='width:75rpx;height:75rpx;line-height:75rpx;margin:36rpx 37.5rpx;'>
+    <swiper-item class='weui-flex swiper-item'>
+      <view class='nav_li center' data-index='{{index}}' wx:for="{{navitems}}" wx:key='nav' wx:for-item="item">
         <view class='iconfont icon-{{item.classs}} ' style="background:{{item.color}};color:#fff;border-radius:50%;"></view>
         <view style='font-size:14px;'>{{item.types}}</view>
       </view>
-      <view class='clearfix'></view>
     </swiper-item>
   </block>
 </swiper>

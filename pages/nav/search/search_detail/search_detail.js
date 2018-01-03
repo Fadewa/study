@@ -105,7 +105,6 @@ Page({
   },
   //搜索时
   wxSearchFn:function(e){
-    console.log(e.detail.value)
     var value = e.detail.value
     var data=[];
     var localStorageValue = [];
@@ -145,7 +144,6 @@ Page({
     wx.getStorage({
       key: 'hisData',
       success: function(res) {
-        console.log(res.data)
         that.data.hisData=res.data.hisData
       }
     })

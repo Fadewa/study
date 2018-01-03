@@ -1,0 +1,119 @@
+/* pages/lists/lists.wxss */
+@import '../moban/fonts/iconfont.wxss';
+@import '../moban/conclude/conclude.wxss';
+@import '../moban/footer/footer.wxss';
+/* 幻灯片  */
+.swiper_1{
+  width: 100%;
+  height: 435rpx;
+  color: #000;
+}
+.swiper_1 image{
+  width: 100%;
+}
+.class_teacher{
+  color: #fff;
+  font-size: 21.7rpx;
+  width: 28rpx;
+  top: 36%;
+  right: 6%;
+}
+.class_tit{
+  color: #fff;
+  top: 36%;
+  left: 10%;
+}
+.class_banner{
+  font-weight: 900;
+  font-size: 32.6rpx;
+  color: #fff;
+  top: 48%;
+  left: 10%;
+}
+.study_now {
+  font-size: 21.7rpx;
+  top: 72%;
+  left: 10%;
+  padding: 12rpx 32rpx;
+  background: #fff;
+  border-radius:25.4rpx; 
+}
+.iconfont{
+  font-size: 43.5rpx;
+}
+
+
+.list_wrapper{
+  width: 1800rpx;
+  padding: 12rpx 0 12rpx 4%;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  font-weight: 600;
+  font-size: 26rpx;
+  border-bottom: solid 1px #d7d7d7;
+}
+.list_li{
+  text-align: center;
+  width: 20%;
+  padding: 12rpx 0;
+  position: relative;
+}
+.list_li.on{
+  color: #fe6a01;
+}
+.list_li.on:before{
+  content: "";
+  position: absolute;
+  width: 72rpx;
+  height: 2px;
+  bottom: 2px;
+  background: #fe6a01;
+  left: 50%;
+  transform: translate(-50%,0)
+}
+.start_all{
+  background: #fff;
+  font-size: 26rpx;
+  padding: 0 4%;
+  width: 100%;
+}
+.start_all view{
+  width: 20%;
+  padding: 12rpx 0;
+}
+.start_all .on{
+  color: #fe6a01;
+}
+.scroll{
+  margin-bottom: 24rpx;
+}
+.td{
+  vertical-align: middle;
+}
+.subject_intro{
+  margin: 24rpx 0;
+  padding: 24rpx 4%;
+}
+.td_r{
+  padding-left: 24rpx;
+}
+.attributes text{
+  display: inline-block;
+  margin-right: 12rpx;
+  font-size: 24rpx;
+  padding: 6rpx 12rpx;
+  border: solid 1px #d7d7d7;
+  color: #a3a3a3;
+}
+.attributes text:first-child{
+  border-color: #00b121;
+  color: #00b121
+}
+.subject_footer{
+  font-size: 24rpx;
+  color: #a3a3a3;
+}
+.subject_footer text.right{
+  color: #00b121;
+}

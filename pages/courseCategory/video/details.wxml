@@ -106,23 +106,72 @@
                     </view>
                     <view class='center comment_footer'><text>查看2条评价</text></view>
                   </view>
+                  <view style='height:420rpx;'></view>
                 </view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
-                  <view class='comment' wx:for="{{comments}}" wx:key="" >
-                      <view class='table'>
-                        <view class='td'>
-                          <image src="{{item.src}}" style='height:64rpx;width:64rpx;border-radius:50%;'></image>
-                        </view>
-                        <view class='td td_comment'>
-                          <view>{{item.userName}}</view>
-                          <view><text>{{item.time}}</text></view>
-                        </view>
+                <!-- 课程目录  -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                  <view class='course_catalog'>
+                    <view class='course_catalog_tit'>共3节课</view>
+                    <view class='course_catalog_li weui-flex'>
+                      <view class='head'><text>1</text></view>
+                      <view class='class_info'>
+                        <view class='class_tit'>职场围炉夜话第一节</view>
+                        <view class='duration'>74分钟</view>
                       </view>
-                      <view>{{item.comment}}</view>
                     </view>
+                    <view class='course_catalog_li weui-flex'>
+                      <view class='head'><text>2</text></view>
+                      <view class='class_info'>
+                        <view class='class_tit'>职场围炉夜话第二节</view>
+                        <view class='duration'>66分钟</view>
+                      </view>
+                    </view>
+                    <view class='course_catalog_li weui-flex'>
+                      <view class='head'><text>3</text></view>
+                      <view class='class_info'>
+                        <view class='class_tit'>职场围炉夜话第三节</view>
+                        <view class='duration'>54分钟</view>
+                      </view>
+                    </view>
+                  </view>
                 </view>
+                <!-- 课程评价  -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                  <view class='comment_t white'>
+                    <view class='comment' wx:for="{{comments}}" wx:key="" >
+                        <view class='table'>
+                          <view class='td'>
+                            <image src="{{item.src}}" style='height:64rpx;width:64rpx;border-radius:50%;'></image>
+                          </view>
+                          <view class='td td_comment'>
+                            <view style='text-align:left'>{{item.userName}}</view>
+                            <text>评分</text><image  wx:for="{{stars}}" wx:key=""  style='height:24rpx;width:24rpx;margin-right:6rpx;' src='{{item.src}}'></image>
+                          </view>
+
+
+                        </view>
+                        <view style='text-align:left;'>{{item.comment}}</view>
+                        <view style='text-align:left;color:#a3a3a3;'>{{item.time}}</view>
+                      </view>
+                    </view>
+                  </view>
             </view>
         </view>
     </view>
+</view>
+<!-- 底部  -->
+<view class='video_footer white weui-flex'>
+  <view class='footer_li'>
+    <view class='iconfont icon-shoucang'></view>
+    <view><text>收藏</text></view>
+  </view>
+  <view class='footer_li position_r'>
+    <view class='iconfont icon-tiwen'></view>
+    <view><text>提问</text></view>
+  </view>
+  <view class='footer_li position_r'>
+    <view class='iconfont icon-xiazai'></view>
+    <view><text>下载</text></view>
+  </view>
+  <view class='footer_lii'><text>加入课程</text></view>
 </view>

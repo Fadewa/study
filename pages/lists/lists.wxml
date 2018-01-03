@@ -1,0 +1,46 @@
+<!--pages/lists/lists.wxml-->
+<!-- 幻灯片  -->
+<swiper class='position_r center swiper_1' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color='#f46e0f' style='height:320rpx;'>
+  <block wx:for="{{items}}" wx:key='index_swiper' wx:for-item="item">
+    <swiper-item data-title='{{item.id}}' bindtap='todetails'>
+      <image src="{{item.src}}" class="slide-image" style='height:320rpx;'></image>
+      <view class='class_teacher position_a'>主讲*{{item.teacher}}</view>
+      <view class='class_tit position_a'>{{item.title}}</view>
+      <view class='class_banner position_a'>{{item.banner}}</view>
+      <view class='study_now position_a'>立即学习</view>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 滑块分类  -->
+<scroll-view scroll-x  class='scroll'>
+  <view class='list_wrapper white'>
+    <view class="list_li {{activeIndex==index?'on':''}}" wx:for="{{lists}}" wx:key="" data-nummber='{{index}}' bindtap="tabClick">{{item}}</view>
+  </view>
+  <block wx:if="{{activeIndex==0}}">
+  <view class='weui-flex start_all'>
+    <view wx:for="{{all}}" wx:key="" class="{{onIndex==index?'on':''}}" data-count='{{index}}' bindtap='click'>{{item}}</view>
+  </view>
+</block>
+</scroll-view>
+<!-- 课程简介  -->
+<view class='subject_intro white' wx:for="{{teacher}}" wx:key="" bindtap='todetails' data-title='{{item.id}}'>
+  <view class='table'>
+    <view class='td td_l'>
+      <image src='{{item.src}}' style='height:86rpx;width:160rpx;'></image>
+    </view>
+    <view class='td td_r'>
+      <view>{{item.banner}}</view>
+      <view class='weui-flex attributes'>
+        <text>高一基础</text>
+        <text>直播</text>
+        <text>公开课</text>
+        <text>试听</text>
+      </view>
+    </view>
+  </view>
+  <view class='subject_footer'>
+    <text>{{item.class_num}}节课，今天21：00开课，{{item.reg_number}}人报名</text>
+    <text class='right'>¥{{item.now_price}}</text>
+  </view>
+</view>
