@@ -1,0 +1,16 @@
+<!--pages/helper/helper.wxml-->
+<view class='helper'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='call white' bindtap='makecall'><text class='iconfont icon-dianhua'></text>电话咨询</view>
+    <view class='work_time white'>工作时间：9：00-23：00</view>
+    <view class='tips'>
+      <view class='tip_tit'>写点意见和反馈吧</view>
+      <textarea name="advice" placeholder='在这里，您可以反馈产品使用过程中遇到的问题，也可以给我们的产品提提建议'></textarea>
+    </view>
+    <view class='contact'>
+      <input name="mobile" placeholder='手机号/QQ'/>
+      <view>您的联系方式有助于我们沟通和解决问题，仅工作人员可见</view>
+    </view>
+    <button formType="submit">提交</button>
+  </form>
+</view>

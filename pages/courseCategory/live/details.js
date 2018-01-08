@@ -62,7 +62,6 @@ Page({
       this.setData({
         'scrollTop.scroll_top': 5085 * c
       })
-      console.log(this.data.subject_detail[2].click)
     }
     //console.log(aa);
     
@@ -70,7 +69,6 @@ Page({
   //回到顶部
   scrollTopFun: function (e) {
     var c = this.data.c
-    //console.log(e.detail);
     //触发gotop的显示条件
     if (e.detail.scrollTop > (141*c) ){  
       this.setData({
@@ -114,7 +112,8 @@ Page({
   },
   goTopFun: function (e) {
     //发现设置scroll-top值不能和上一次的值一样，否则无效，所以这里加了个判断
-    var _top = this.data.scrollTop.scroll_top;  
+    var _top = this.data.scrollTop.scroll_top;
+    
     if (_top == 1) {
       _top = 0;
     } else {

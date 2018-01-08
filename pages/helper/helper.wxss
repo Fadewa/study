@@ -1,0 +1,50 @@
+/* pages/helper/helper.wxss */
+@import '../moban/fonts/iconfont.wxss';
+@import '../moban/conclude/conclude.wxss';
+.helper{
+  padding: 24rpx 4%;
+}
+.call,.work_time{
+  text-align: center;
+  line-height: 36rpx;
+  padding: 12rpx 0;
+}
+.call text{
+  display: inline-block;
+  color: #ff9000;
+  border-radius: 50%;
+  height: 36rpx;
+  width: 36rpx;
+  border: solid 1px #ff9000; 
+  margin-right: 56rpx;
+}
+.work_time{
+  font-size: 24rpx;
+  color: #a3a3a3;
+}
+.tips{
+  color: #a3a3a3;
+  font-size: 24rpx;
+}
+.tip_tit,input{
+  padding: 12rpx 0;
+  font-size: 24rpx;
+}
+textarea,input{
+  box-sizing: border-box;
+  width: 100%;
+  background: #fff;
+  padding: 18rpx;
+}
+input{
+  margin: 24rpx 0;
+  height: 90rpx;
+}
+.contact>view{
+  font-size: 24rpx;
+  color: #a3a3a3;
+}
+button{
+  background: #ffb74e;
+  color: #fff;
+}

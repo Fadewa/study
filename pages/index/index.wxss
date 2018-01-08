@@ -117,7 +117,9 @@ page{
   top: 50%;
   transform: translate(0,-50%);
 }
-.public_li .class_banner,.public_li .class_tit,.public_li .study_now{
+.public_li .class_banner,
+.public_li .class_tit,
+.public_li .study_now{
   font-size: 22rpx;
 }
 .public_li .study_now{
@@ -168,4 +170,16 @@ page{
 /* 底部 */
 .toonline{
   color: #fa6805;
+}
+.footer_totop{
+  position: absolute; 
+  bottom: 100rpx; 
+  right: 30rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #c7c7c7;
+  background: #fff;
+  font-size: 36rpx;
+  display: block;
+  padding: 16rpx 25rpx;
+  text-align: center;
 }

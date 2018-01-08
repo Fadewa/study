@@ -48,7 +48,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(app.globalData.teacher)
     var id = options.id
     this.setData({
       items: app.globalData.teacher.slice(0, 5),

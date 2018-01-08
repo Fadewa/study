@@ -164,7 +164,7 @@
     <view class='clearfix'></view>
   </view>
 
-  <view class='my_course_table'>
+  <view class='my_course_table' bindtap='help'>
     <view class='left'>  
       <text class='iconfont icon-fankui'></text>
       <text>帮助与反馈</text>

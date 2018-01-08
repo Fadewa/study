@@ -8,13 +8,11 @@
 }
 .footer_ul{
   border: solid 1px #ccc;
-  padding-top: 5rpx;
 }
 .footer_li{
   width: 20%;
   font-size: 24rpx;
   border-radius: 10rpx;
-  margin: 12rpx 0 6rpx;
 }
 .footer_li .iconfont{
   font-size: 36rpx;

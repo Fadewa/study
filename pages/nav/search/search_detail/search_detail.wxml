@@ -26,7 +26,11 @@
               <text>{{item}}</text>
             </view>
           </view>
-          <view class='td td_r'></view>
+          <view class='td td_r'>
+            <view>全部</view>
+            <view>高中课程</view>
+            <view>高考</view>
+          </view>
         </view>
       </block>
     </view>

@@ -28,6 +28,12 @@ Page({
       url: '../../admin/userinfo/userinfo',
     })
   },
+  //帮助页面
+  help:function(){
+    wx.navigateTo({
+      url: '/pages/helper/helper',
+    })
+  },
   data: {
     name:'',
     imgUrl:'',

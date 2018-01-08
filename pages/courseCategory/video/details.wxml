@@ -38,7 +38,7 @@
                     <view class='subject_info_explain'><text>退款说明：</text>付款后不支持退款</view>
                     <view class='subject_info_explain' style='color:#479cdc;'><text>观看有效期：</text>付款后180天内有效</view>
                     <view>特价体验，体验的就是这3个小节，如果更新了会涨价</view>
-                    <image src='../../image/detail.jpg'></image>
+                    <image src='https://app.lovejia.net/ZXXX/Uploads/Picture/pic/detail.jpg'></image>
                   </view>
                   <!-- 老师介绍  -->
                   <view class='teacher_info white'>

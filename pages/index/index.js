@@ -16,12 +16,10 @@ var loadMore = function (that, pages) {
       var list = that.data.list;
       //加载完全部课程后
       if (res.data == null) {
-        wx.showToast({
-          title: '已经是全部课程'
-        })
         that.setData({
           hidden: true,
-          iscontinue: false
+          iscontinue: false,
+          more:true
         });
       } else {
         //展示每6个一次添加
@@ -31,7 +29,6 @@ var loadMore = function (that, pages) {
         that.setData({
           list: list
         });
-        page++;
         that.setData({
           hidden: true
         });
@@ -71,9 +68,11 @@ Page({
   data: {
     hidden: true,
     list: [],
+    goTop_show: false,
     scrollTop: 0,
     scrollHeight: 0,
     iscontinue: true,
+    more:false,
     x:0,
     y:6,
     items:[],
@@ -163,20 +162,41 @@ Page({
     })
   },
   //页面滑动到底部
-  bindDownLoad: function () {
+  bindDownLoad: function (e) {
     var that = this;
     page += 6
     if (this.data.iscontinue) {
       loadMore(that, page);
-      console.log("lower");
     }
   },
-  scroll: function (event) {
-    //该方法绑定了页面滚动时的事件，我这里记录了当前的position.y的值,为了请求数据之后把页面定位到这里来。
+  scroll: function (e) {
+  //该方法绑定了页面滚动时的事件，我这里记录了当前的position.y的值,为了请求数据之后把页面定位到这里来。
     this.setData({
-      scrollTop: event.detail.scrollTop
+      scrollTop: e.detail.scrollTop
     });
+    if (e.detail.scrollTop > 1) {
+      this.setData({
+        goTop_show: true
+      });
+    } else {
+      this.setData({
+        goTop_show: false
+      });
+    }
   },
+  goTopFun: function (e) {
+    //发现设置scroll-top值不能和上一次的值一样，否则无效，所以这里加了个判断
+    var _top = this.data.scrollTop;
+    console.log("距离顶部：" + _top)
+    if (_top == 1) {
+      _top = 0;
+    } else {
+      _top = 1;
+    }
+    this.setData({
+      scrollTop: _top
+    });
+  }, 
   /**
    * 生命周期函数--监听页面加载
    */

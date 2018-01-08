@@ -133,10 +133,9 @@ Page({
   },
   //跳转搜索到的详情界面
   todetail:function(e){
-    console.log(e.currentTarget.dataset.id)
     var id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '/pages/details/details?title=' + id,
+      url: '/pages/courseCategory/live/details?title=' + id,
     })
   },
   onLoad: function (optins) {

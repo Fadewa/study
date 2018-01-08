@@ -112,12 +112,16 @@
       </view>
   </view>
 </view>
-</scroll-view>
-<view class="body-view">
-<loading hidden="{{hidden}}" bindchange="loadingChange">
-      加载中...
- </loading>
+<loading hidden="{{hidden}}">
+    加载中...
+</loading>
+<view class="weui-loadmore weui-loadmore_line" wx:if="{{more}}">
+  <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无更多</view>
 </view>
-<view style='width:100%;height:74rpx;'></view>
+<view style='width:100%;height:96rpx;'></view>
+</scroll-view>
+<view class='footer_totop iconfont icon-arrowUpAdd'  wx:if="{{goTop_show}}" bindtap='goTopFun'>
+</view>
+
 
 

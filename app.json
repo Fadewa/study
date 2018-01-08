@@ -2,6 +2,7 @@
   "pages":[
     
     "pages/index/index",
+    "pages/helper/helper",
     "pages/lists/lists",
     "pages/courseCategory/video/details",
     "pages/pay/pay",
