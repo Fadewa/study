@@ -93,7 +93,7 @@ Page({
       })
     }else{
       wx.request({
-        url: "https://app.lovejia.net/zxxx/index.php?s=/w16/Demotest/Demotest/forfree",
+        url: "https://eaglefly.ltd/zxxx/index.php?s=/w16/Demotest/Demotest/forfree",
         data:{
           mobile: detail.mobile,
           name: detail.name,

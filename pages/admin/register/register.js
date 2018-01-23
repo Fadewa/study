@@ -121,7 +121,7 @@ Page({
                       }
                     })
                     wx.request({
-                      url: 'https://app.lovejia.net/zxxx/index.php?s=/w16/Demotest/Demotest/loadImg',
+                      url: 'https://eaglefly.ltd/zxxx/index.php?s=/w16/Demotest/Demotest/loadImg',
                       data: {
                         mobile: this_.data.mobile,
                         password: this_.data.password,
@@ -220,7 +220,7 @@ Page({
     })
     var that = this
     wx.request({
-      url: 'https://app.lovejia.net/zxxx/index.php?s=/w16/Demotest/Demotest/getUserinfo',
+      url: 'https://eaglefly.ltd/zxxx/index.php?s=/w16/Demotest/Demotest/getUserinfo',
       data: {
         mobile: this.data.mobile
       },
@@ -299,7 +299,7 @@ function thirdStep() { // 提交［密码］和［重新密码］
     //向后台传密码和手机号
     var this_ = this
     wx.request({
-      url: 'https://app.lovejia.net/zxxx/index.php?s=/w16/Demotest/Demotest/storepassword', 
+      url: 'https://eaglefly.ltd/zxxx/index.php?s=/w16/Demotest/Demotest/storepassword', 
       data: {
         password: password,
         mobile: app.globalData.mobile_id

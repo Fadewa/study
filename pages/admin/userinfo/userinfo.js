@@ -45,7 +45,7 @@ Page({
           success: function (res) {
             var data = JSON.parse(res.data)
             wx.request({
-              url: 'https://app.lovejia.net/zxxx/index.php?s=/w16/Demotest/Demotest/updateImg', 
+              url: 'https://eaglefly.ltd/zxxx/index.php?s=/w16/Demotest/Demotest/updateImg', 
               data: {
                 id: data.id,
                 mobile: that.data.person.mobile
@@ -94,7 +94,7 @@ Page({
     var that = this;
     var formData = e.detail.value;
     wx.request({
-      url: 'https://app.lovejia.net/zxxx/index.php?s=/w16/Demotest/Demotest/saveinfo',
+      url: 'https://eaglefly.ltd/zxxx/index.php?s=/w16/Demotest/Demotest/saveinfo',
       data: {
         homeLand: formData.homeLand,
         birthDate: formData.birthDate,
@@ -130,7 +130,7 @@ Page({
           })
         }
         wx.request({
-          url: 'https://app.lovejia.net/zxxx/index.php?s=/w16/Demotest/Demotest/getUserinfo',
+          url: 'https://eaglefly.ltd/zxxx/index.php?s=/w16/Demotest/Demotest/getUserinfo',
           data: {
             mobile: res.data.mobile
           },

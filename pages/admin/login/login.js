@@ -42,7 +42,7 @@ Page({
     var this_ = this
     if (this.data.mobile != '' && this.data.password!=''){
       wx.request({
-        url: 'https://app.lovejia.net/zxxx/index.php?s=/w16/Demotest/Demotest/getpassword',
+        url: 'https://eaglefly.ltd/zxxx/index.php?s=/w16/Demotest/Demotest/getpassword',
         data: {
           mobile: this_.data.mobile,
           password: this_.data.password
@@ -57,7 +57,7 @@ Page({
               success: function (res) {
                 //登陆成功向后台请求个人信息
                 wx.request({
-                  url: 'https://app.lovejia.net/zxxx/index.php?s=/w16/Demotest/Demotest/getUserinfo',
+                  url: 'https://eaglefly.ltd/zxxx/index.php?s=/w16/Demotest/Demotest/getUserinfo',
                   data: {
                     mobile: this_.data.mobile
                   },

@@ -22,14 +22,13 @@
       <block wx:if="{{isclick==index}}">
         <view class='subject_body table position_f'>
           <view class='td td_l'>
-            <view class="{{ishover==index?'on':''}}" wx:for='{{subject[index]}}' wx:key='' wx:for-item="item" data-id='{{index}}' catchtap='toon'>
+            <view class="{{ishover==index?'on':''}}" wx:for='{{searchdata}}' wx:key='' wx:for-item="item" data-id='{{index}}' catchtap='toon'>
               <text>{{item}}</text>
             </view>
           </view>
           <view class='td td_r'>
-            <view>全部</view>
-            <view>高中课程</view>
-            <view>高考</view>
+            <view wx:for='{{erji}}' wx:key='' wx:for-item="item">{{item}}</view>
+            
           </view>
         </view>
       </block>

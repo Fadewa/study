@@ -1,6 +1,6 @@
 const app=getApp();
 var navs = require('../JS/navs');
-var url = "https://app.lovejia.net/zxxx/index.php?s=/w16/Demotest/Demotest/swiper123";
+var url = "https://eaglefly.ltd/zxxx/index.php?s=/w16/Demotest/Demotest/swiper123";
 var page = 0;
 // 请求数据
 var loadMore = function (that, pages) {
@@ -212,7 +212,7 @@ Page({
     })
     loadMore(that, 0);
     wx.request({
-      url: 'https://app.lovejia.net/zxxx/index.php?s=/w16/Demotest/Demotest/swiper122',
+      url: 'https://eaglefly.ltd/zxxx/index.php?s=/w16/Demotest/Demotest/swiper122',
       header: {
         'content-type': 'application/json' // 默认值
       },

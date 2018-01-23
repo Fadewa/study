@@ -34,7 +34,7 @@
 
     <!-- 课程详情  -->
     <view class='subject_particulars'>
-      <image src='https://app.lovejia.net/ZXXX/Uploads/Picture/pic/detail.jpg'></image> 
+      <image src='https://eaglefly.ltd/zxxx/Uploads/Picture/pic/detail.jpg'></image> 
     </view>
     <!-- 课程安排  -->
     <view class='subject_arrangement white'>

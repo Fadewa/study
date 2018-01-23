@@ -16,7 +16,7 @@ Page({
         title: '提交中...',
       })
       wx.request({
-        url: 'https://app.lovejia.net/ZXXX/index.php?s=/w16/Demotest/Demotest/getAdvice',
+        url: 'https://eaglefly.ltd/ZXXX/index.php?s=/w16/Demotest/Demotest/getAdvice',
         header: {
           'content-type': 'application/json' // 默认值
         },

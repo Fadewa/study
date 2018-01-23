@@ -1,15 +1,10 @@
 //app.js
 var common = require('utils/common.js')
 App({
-  url: 'https://app.lovejia.net/ZXXX/index.php?s=/w16/',
+  url: 'https://eaglefly.ltd/ZXXX/index.php?s=/w16/',
   PHPSESSID: '',
   onLaunch: function () {
     common.initApp(this.url, true)
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
     // 登录
     wx.login({
       success: res => {
